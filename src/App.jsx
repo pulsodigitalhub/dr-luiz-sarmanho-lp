@@ -16,7 +16,7 @@ const pageMarkup = `<header class="topbar">
       </nav>
 
       <a class="button primary" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
-        <img src="/assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
+        <img src="assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
         WhatsApp
       </a>
     </div>
@@ -30,13 +30,13 @@ const pageMarkup = `<header class="topbar">
           <p class="hero-copy">Agende uma avaliação com o Dr. Luiz Sarmanho, ortopedista com atuação em trauma, quadril, artroplastia total e procedimentos ortopédicos relacionados à dor.</p>
           <div class="hero-actions">
             <a class="button primary" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
-              <img src="/assets/icons/health-line/calendar.svg" alt="" aria-hidden="true">
+              <img src="assets/icons/health-line/calendar.svg" alt="" aria-hidden="true">
               Agendar avaliação
             </a>
           </div>
 
           <figure class="hero-mobile-photo">
-            <img src="/assets/foto-background.png" alt="Dr. Luiz Henrique Sarmanho">
+            <img src="assets/foto-background.png" alt="Dr. Luiz Henrique Sarmanho">
           </figure>
 
           <div class="hero-proof" aria-label="Diferenciais do Dr. Luiz Sarmanho">
@@ -71,32 +71,32 @@ const pageMarkup = `<header class="topbar">
 
         <div class="condition-grid">
           <article class="condition">
-            <div class="icon"><img src="/assets/icons/health-line/leg.svg" alt="" aria-hidden="true"></div>
+            <div class="icon"><img src="assets/icons/health-line/leg.svg" alt="" aria-hidden="true"></div>
             <h3>Dor no quadril</h3>
             <p>Para quem sente dor ao caminhar, levantar da cadeira, subir escadas ou permanecer muito tempo em pé.</p>
           </article>
           <article class="condition">
-            <div class="icon"><img src="/assets/icons/health-line/xray.svg" alt="" aria-hidden="true"></div>
+            <div class="icon"><img src="assets/icons/health-line/xray.svg" alt="" aria-hidden="true"></div>
             <h3>Artrose e desgaste articular</h3>
             <p>Avaliação do grau de desgaste, impacto na rotina e possibilidades de tratamento conforme o caso.</p>
           </article>
           <article class="condition">
-            <div class="icon"><img src="/assets/icons/health-line/trauma-alert.svg" alt="" aria-hidden="true"></div>
+            <div class="icon"><img src="assets/icons/health-line/trauma-alert.svg" alt="" aria-hidden="true"></div>
             <h3>Fraturas e traumas</h3>
             <p>Atendimento para lesões traumáticas e acompanhamento de casos com maior complexidade ortopédica.</p>
           </article>
           <article class="condition">
-            <div class="icon"><img src="/assets/icons/health-line/pain-burst.svg" alt="" aria-hidden="true"></div>
+            <div class="icon"><img src="assets/icons/health-line/pain-burst.svg" alt="" aria-hidden="true"></div>
             <h3>Dor que não melhora</h3>
             <p>Quando a dor persiste por semanas, volta com frequência ou limita atividades simples da rotina.</p>
           </article>
           <article class="condition">
-            <div class="icon"><img src="/assets/icons/health-line/walking.svg" alt="" aria-hidden="true"></div>
+            <div class="icon"><img src="assets/icons/health-line/walking.svg" alt="" aria-hidden="true"></div>
             <h3>Dificuldade para se movimentar</h3>
             <p>Rigidez, perda de mobilidade, insegurança para caminhar ou dificuldade para subir escadas.</p>
           </article>
           <article class="condition">
-            <div class="icon"><img src="/assets/icons/health-line/foot.svg" alt="" aria-hidden="true"></div>
+            <div class="icon"><img src="assets/icons/health-line/foot.svg" alt="" aria-hidden="true"></div>
             <h3>Quedas ou piora após esforço</h3>
             <p>Casos em que a dor começa ou piora depois de queda, torção, impacto ou aumento de carga.</p>
           </article>
@@ -168,21 +168,21 @@ const pageMarkup = `<header class="topbar">
           <div class="surgery-carousel" aria-label="Fotos do Dr. Luiz em centro cirúrgico">
             <div class="carousel-track">
               <figure class="carousel-slide active">
-                <img src="/assets/dr-luiz-cirurgia-close-1.jpeg" alt="Dr. Luiz Sarmanho em centro cirúrgico">
+                <img src="assets/dr-luiz-cirurgia-close-1.jpeg" alt="Dr. Luiz Sarmanho em centro cirúrgico">
                 <figcaption class="carousel-caption">
                   <strong>Atuação em centro cirúrgico</strong>
                   <span>Registros profissionais em ambiente hospitalar e cirúrgico.</span>
                 </figcaption>
               </figure>
               <figure class="carousel-slide">
-                <img src="/assets/dr-luiz-cirurgia-close-2.jpeg" alt="Dr. Luiz Sarmanho durante procedimento ortopédico">
+                <img src="assets/dr-luiz-cirurgia-close-2.jpeg" alt="Dr. Luiz Sarmanho durante procedimento ortopédico">
                 <figcaption class="carousel-caption">
                   <strong>Trauma e quadril</strong>
                   <span>Experiência em casos ortopédicos que exigem precisão.</span>
                 </figcaption>
               </figure>
               <figure class="carousel-slide">
-                <img src="/assets/dr-luiz-cirurgia-1.jpg" alt="Registro do Dr. Luiz em procedimento ortopédico">
+                <img src="assets/dr-luiz-cirurgia-1.jpg" alt="Registro do Dr. Luiz em procedimento ortopédico">
                 <figcaption class="carousel-caption">
                   <strong>Rotina cirúrgica</strong>
                   <span>Atuação em procedimentos e acompanhamento de casos complexos.</span>
@@ -215,32 +215,32 @@ const pageMarkup = `<header class="topbar">
 
         <div class="service-grid">
           <article class="service">
-            <div class="service-icon"><img src="/assets/icons/health-line/stethoscope.svg" alt="" aria-hidden="true"></div>
+            <div class="service-icon"><img src="assets/icons/health-line/stethoscope.svg" alt="" aria-hidden="true"></div>
             <h3>Ortopedia e traumatologia</h3>
             <p>Consulta para dores, lesões, fraturas, limitações de movimento e queixas musculoesqueléticas.</p>
           </article>
           <article class="service">
-            <div class="service-icon"><img src="/assets/icons/health-line/joints.svg" alt="" aria-hidden="true"></div>
+            <div class="service-icon"><img src="assets/icons/health-line/joints.svg" alt="" aria-hidden="true"></div>
             <h3>Quadril e artroplastia</h3>
             <p>Avaliação de dor no quadril, artrose, fraturas e casos em que a artroplastia total pode ser discutida.</p>
           </article>
           <article class="service">
-            <div class="service-icon"><img src="/assets/icons/health-line/crutches.svg" alt="" aria-hidden="true"></div>
+            <div class="service-icon"><img src="assets/icons/health-line/crutches.svg" alt="" aria-hidden="true"></div>
             <h3>Trauma ortopédico</h3>
             <p>Experiência em casos complexos, incluindo fraturas de fêmur, pelve e acetábulo.</p>
           </article>
           <article class="service">
-            <div class="service-icon"><img src="/assets/icons/health-line/injection-care.svg" alt="" aria-hidden="true"></div>
+            <div class="service-icon"><img src="assets/icons/health-line/injection-care.svg" alt="" aria-hidden="true"></div>
             <h3>Viscossuplementação</h3>
             <p>Aplicação de ácido hialurônico pode ser avaliada em articulações com indicação clínica.</p>
           </article>
           <article class="service">
-            <div class="service-icon"><img src="/assets/icons/health-line/pain.svg" alt="" aria-hidden="true"></div>
+            <div class="service-icon"><img src="assets/icons/health-line/pain.svg" alt="" aria-hidden="true"></div>
             <h3>Procedimentos relacionados à dor</h3>
             <p>Infiltrações, viscossuplementação e outros procedimentos podem ser avaliados quando houver indicação.</p>
           </article>
           <article class="service">
-            <div class="service-icon"><img src="/assets/icons/health-line/health-data-sync.svg" alt="" aria-hidden="true"></div>
+            <div class="service-icon"><img src="assets/icons/health-line/health-data-sync.svg" alt="" aria-hidden="true"></div>
             <h3>Acompanhamento pós-operatório</h3>
             <p>Acompanhamento da recuperação, orientação sobre retorno às atividades e avaliação da evolução funcional.</p>
           </article>
@@ -260,22 +260,22 @@ const pageMarkup = `<header class="topbar">
 
         <div class="process">
           <article class="step">
-            <img src="/assets/icons/health-line/doctor.svg" alt="" aria-hidden="true">
+            <img src="assets/icons/health-line/doctor.svg" alt="" aria-hidden="true">
             <h3>Entendimento da queixa</h3>
             <p>O que dói, há quanto tempo, o que piora, o que melhora e como isso interfere na rotina.</p>
           </article>
           <article class="step">
-            <img src="/assets/icons/health-line/medical-records.svg" alt="" aria-hidden="true">
+            <img src="assets/icons/health-line/medical-records.svg" alt="" aria-hidden="true">
             <h3>Exame físico e exames</h3>
             <p>Avaliação clínica e análise de exames já realizados, quando houver.</p>
           </article>
           <article class="step">
-            <img src="/assets/icons/health-line/medical-search.svg" alt="" aria-hidden="true">
+            <img src="assets/icons/health-line/medical-search.svg" alt="" aria-hidden="true">
             <h3>Hipótese diagnóstica</h3>
             <p>Explicação sobre a provável origem da dor ou limitação e se há necessidade de novos exames.</p>
           </article>
           <article class="step">
-            <img src="/assets/icons/health-line/health-worker-form.svg" alt="" aria-hidden="true">
+            <img src="assets/icons/health-line/health-worker-form.svg" alt="" aria-hidden="true">
             <h3>Plano de cuidado</h3>
             <p>Orientação sobre tratamento conservador, fisioterapia, procedimento, cirurgia ou acompanhamento.</p>
           </article>
@@ -290,7 +290,7 @@ const pageMarkup = `<header class="topbar">
           <p>Fale com a equipe para verificar disponibilidade, convênio e agendar uma avaliação com o Dr. Luiz.</p>
         </div>
         <a class="button primary" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
-          <img src="/assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
+          <img src="assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
           Chamar no WhatsApp
         </a>
       </div>
@@ -303,7 +303,7 @@ const pageMarkup = `<header class="topbar">
           <h2>Atendimento particular e por convênios selecionados.</h2>
           <p>A disponibilidade pode variar conforme o tipo de atendimento, procedimento e regras de cada convênio. Antes de marcar, fale com a equipe pelo WhatsApp para confirmar se o seu plano é aceito para o caso desejado.</p>
           <a class="button dark" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20confirmar%20se%20meu%20conv%C3%AAnio%20%C3%A9%20aceito%20para%20atendimento%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
-            <img src="/assets/icons/health-line/insurance-card.svg" alt="" aria-hidden="true">
+            <img src="assets/icons/health-line/insurance-card.svg" alt="" aria-hidden="true">
             Confirmar meu convênio
           </a>
         </div>
@@ -325,49 +325,49 @@ const pageMarkup = `<header class="topbar">
           <div class="faq-item open">
             <button class="faq-question" type="button">
               O Dr. Luiz atende quais problemas?
-              <img src="/assets/icons/health-line/body.svg" alt="" aria-hidden="true">
+              <img src="assets/icons/health-line/body.svg" alt="" aria-hidden="true">
             </button>
             <div class="faq-answer">Atende queixas ortopédicas como dores articulares, lesões, fraturas, artrose, problemas no quadril e casos que podem precisar de procedimentos ou cirurgia.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
               Ele realiza cirurgia de quadril?
-              <img src="/assets/icons/health-line/hospital.svg" alt="" aria-hidden="true">
+              <img src="assets/icons/health-line/hospital.svg" alt="" aria-hidden="true">
             </button>
             <div class="faq-answer">Sim. A atuação inclui avaliação de casos de artroplastia total do quadril, fraturas do quadril, pelve e acetábulo.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
               Toda dor no quadril precisa de cirurgia?
-              <img src="/assets/icons/health-line/cardiogram.svg" alt="" aria-hidden="true">
+              <img src="assets/icons/health-line/cardiogram.svg" alt="" aria-hidden="true">
             </button>
             <div class="faq-answer">Não. A indicação depende do diagnóstico, da intensidade dos sintomas, do grau de limitação e da resposta a tratamentos anteriores.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
               Quais procedimentos relacionados à dor podem ser avaliados?
-              <img src="/assets/icons/health-line/joint-injection.svg" alt="" aria-hidden="true">
+              <img src="assets/icons/health-line/joint-injection.svg" alt="" aria-hidden="true">
             </button>
             <div class="faq-answer">Infiltrações, viscossuplementação e terapia por ondas de choque podem ser considerados em casos selecionados, sempre após avaliação médica.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
               Aceita convênio?
-              <img src="/assets/icons/health-line/credit-card.svg" alt="" aria-hidden="true">
+              <img src="assets/icons/health-line/credit-card.svg" alt="" aria-hidden="true">
             </button>
             <div class="faq-answer">Sim, há atendimento por diversos convênios e também particular. A cobertura precisa ser confirmada com a equipe antes do agendamento.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
               Como faço para agendar?
-              <img src="/assets/icons/health-line/appointment-check.svg" alt="" aria-hidden="true">
+              <img src="assets/icons/health-line/appointment-check.svg" alt="" aria-hidden="true">
             </button>
             <div class="faq-answer">O primeiro contato pode ser feito pelo WhatsApp. A equipe informa horários, local, documentos necessários e orienta sobre convênio ou consulta particular.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
               Preciso levar exames?
-              <img src="/assets/icons/health-line/exam-folder.svg" alt="" aria-hidden="true">
+              <img src="assets/icons/health-line/exam-folder.svg" alt="" aria-hidden="true">
             </button>
             <div class="faq-answer">Se tiver exames anteriores, leve para a consulta. Eles ajudam na avaliação, mas o médico também pode solicitar novos exames se forem necessários.</div>
           </div>
@@ -384,7 +384,7 @@ const pageMarkup = `<header class="topbar">
         <p>Médico ortopedista e traumatologista com atuação em trauma ortopédico de alta complexidade, quadril, artroplastia total e procedimentos relacionados à dor. Brasília-DF.</p>
       </div>
       <a class="button primary" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
-        <img src="/assets/icons/health-line/appointment-check.svg" alt="" aria-hidden="true">
+        <img src="assets/icons/health-line/appointment-check.svg" alt="" aria-hidden="true">
         Agendar consulta
       </a>
     </div>
@@ -392,7 +392,7 @@ const pageMarkup = `<header class="topbar">
 
   <div class="floating-cta">
     <a class="button dark" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
-      <img src="/assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
+      <img src="assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
       WhatsApp
     </a>
   </div>`;

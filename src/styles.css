@@ -171,7 +171,7 @@
       color: var(--white);
       background-image:
         linear-gradient(90deg, rgba(4, 24, 28, .94) 0%, rgba(4, 24, 28, .78) 43%, rgba(4, 24, 28, .2) 100%),
-        url("/assets/foto-background.png");
+        url("../assets/foto-background.png");
       background-size: cover, cover;
       background-repeat: no-repeat, no-repeat;
       background-position: center, 58% center;
@@ -190,7 +190,7 @@
       .hero {
         background-image:
           linear-gradient(90deg, rgba(4, 24, 28, .94) 22%, rgba(4, 24, 28, .78) 43%, rgba(4, 24, 28, .18) 75%),
-          url("/assets/foto-background.png");
+          url("../assets/foto-background.png");
         background-size: cover, cover;
         background-position: center, 60% center;
       }
@@ -396,7 +396,7 @@
       overflow: hidden;
       background:
         linear-gradient(180deg, rgba(16,35,41,.02), rgba(16,35,41,.12)),
-        url("/assets/dr-luiz-sobre.jpg") 64% 48% / cover no-repeat;
+        url("../assets/dr-luiz-sobre.jpg") 64% 48% / cover no-repeat;
     }
 
     .bio {
@@ -777,7 +777,7 @@
       color: var(--white);
       background:
         linear-gradient(90deg, rgba(10, 47, 54, .96), rgba(10, 47, 54, .78)),
-        url("/assets/dr-luiz-cirurgia-2.jpg") center / cover no-repeat;
+        url("../assets/dr-luiz-cirurgia-2.jpg") center / cover no-repeat;
     }
 
     .cta-row {
