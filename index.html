@@ -1,0 +1,1590 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Luiz Sarmanho | Ortopedista e Traumatologista em Brasília</title>
+  <meta name="description" content="Atendimento ortopédico com foco em trauma, quadril, artroplastia e procedimentos relacionados à dor. Agende sua avaliação com o Dr. Luiz Sarmanho em Brasília.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #102329;
+      --muted: #5b6b70;
+      --paper: #f6f8f7;
+      --white: #ffffff;
+      --teal: #12606a;
+      --teal-2: #0b444c;
+      --aqua: #d9f1ee;
+      --gold: #c3995b;
+      --sage: #7d9b8d;
+      --line: rgba(16, 35, 41, .13);
+      --shadow: 0 22px 70px rgba(11, 68, 76, .14);
+      --radius: 8px;
+      --container: min(1180px, calc(100% - 40px));
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: var(--container);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: absolute;
+      z-index: 10;
+      inset: 0 0 auto;
+      padding: 22px 0;
+      color: var(--white);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      font-weight: 800;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255,255,255,.42);
+      border-radius: 50%;
+      background: rgba(255,255,255,.1);
+      backdrop-filter: blur(10px);
+      font-size: 14px;
+      letter-spacing: .08em;
+    }
+
+    .brand span:last-child {
+      display: block;
+      max-width: 280px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255,255,255,.86);
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 20px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 1;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      white-space: nowrap;
+    }
+
+    .button svg {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+
+    .button img {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 auto;
+      object-fit: contain;
+    }
+
+    .button.dark img,
+    .button.ghost img {
+      filter: brightness(0) invert(1);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button.primary {
+      color: #092327;
+      background: var(--aqua);
+      box-shadow: 0 18px 42px rgba(217, 241, 238, .24);
+    }
+
+    .button.dark {
+      color: var(--white);
+      background: var(--teal);
+      box-shadow: 0 18px 36px rgba(18, 96, 106, .22);
+    }
+
+    .button.ghost {
+      color: var(--white);
+      border-color: rgba(255,255,255,.35);
+      background: rgba(255,255,255,.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 86vh;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      color: var(--white);
+      background-image:
+        linear-gradient(90deg, rgba(4, 24, 28, .94) 0%, rgba(4, 24, 28, .78) 43%, rgba(4, 24, 28, .2) 100%),
+        url("assets/foto-background.png");
+      background-size: cover, cover;
+      background-repeat: no-repeat, no-repeat;
+      background-position: center, 58% center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 160px;
+      background: linear-gradient(0deg, rgba(246,248,247,1), rgba(246,248,247,0));
+      pointer-events: none;
+    }
+
+    @media (min-width: 981px) {
+      .hero {
+        background-image:
+          linear-gradient(90deg, rgba(4, 24, 28, .94) 22%, rgba(4, 24, 28, .78) 43%, rgba(4, 24, 28, .18) 75%),
+          url("assets/foto-background.png");
+        background-size: cover, cover;
+        background-position: center, 60% center;
+      }
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      padding: 150px 0 86px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 22px;
+      color: var(--aqua);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 620px;
+      margin-bottom: 22px;
+      font-size: clamp(44px, 4vw, 58px);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    .hero-title-accent {
+      color: var(--aqua);
+    }
+
+    .hero-copy {
+      max-width: 630px;
+      margin-bottom: 30px;
+      color: rgba(255,255,255,.84);
+      font-size: clamp(18px, 2vw, 22px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 38px;
+    }
+
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(140px, 1fr));
+      gap: 1px;
+      max-width: 850px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.15);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-mobile-photo {
+      display: none;
+    }
+
+    .proof-item {
+      min-height: 104px;
+      padding: 20px;
+      background: rgba(8, 42, 48, .52);
+    }
+
+    .proof-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .proof-item span {
+      color: rgba(255,255,255,.72);
+      font-size: 13px;
+    }
+
+    section {
+      padding: 92px 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, .86fr) minmax(280px, .5fr);
+      gap: 44px;
+      align-items: end;
+      margin-bottom: 38px;
+    }
+
+    .kicker {
+      margin-bottom: 12px;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .11em;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-size: clamp(32px, 4vw, 56px);
+      line-height: 1.04;
+      letter-spacing: 0;
+    }
+
+    .section-head p,
+    .lead {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .problem-band {
+      padding-top: 70px;
+    }
+
+    .condition-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .condition {
+      min-height: 190px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 18px 46px rgba(16, 35, 41, .06);
+    }
+
+    .condition .icon {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 18px;
+      border-radius: var(--radius);
+      color: var(--teal);
+      background: #e9f5f3;
+    }
+
+    .condition svg {
+      width: 21px;
+      height: 21px;
+    }
+
+    .condition .icon img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+    .condition h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 1.22;
+    }
+
+    .condition p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(320px, .72fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .surface {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .doctor-photo {
+      min-height: 540px;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(16,35,41,.02), rgba(16,35,41,.12)),
+        url("assets/dr-luiz-sobre.jpg") 64% 48% / cover no-repeat;
+    }
+
+    .bio {
+      padding: 34px;
+    }
+
+    .bio h2 {
+      max-width: 680px;
+      margin-bottom: 22px;
+      font-size: clamp(34px, 3.3vw, 46px);
+      line-height: 1.08;
+    }
+
+    .bio p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .timeline-item {
+      display: grid;
+      gap: 6px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfcfb;
+    }
+
+    .timeline-item strong {
+      display: block;
+      margin-bottom: 4px;
+      line-height: 1.25;
+    }
+
+    .timeline-item small {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    #sobre {
+      padding-bottom: 42px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: minmax(210px, .9fr) repeat(3, minmax(0, 1fr));
+      gap: 0;
+      align-items: stretch;
+      margin-top: 26px;
+      overflow: hidden;
+      border: 1px solid rgba(16, 35, 41, .12);
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, #f8fbfa 0%, #edf7f5 100%);
+      box-shadow: 0 16px 38px rgba(16, 35, 41, .06);
+    }
+
+    .stats-label {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 24px 28px;
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .stat {
+      position: relative;
+      padding: 22px 24px;
+      color: var(--ink);
+      background: transparent;
+    }
+
+    .stat,
+    .stats-label + .stat {
+      border-left: 1px solid rgba(16, 35, 41, .14);
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--teal);
+      font-size: clamp(22px, 2.4vw, 32px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .stat span {
+      display: block;
+      max-width: 280px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .media-showcase {
+      padding-top: 38px;
+    }
+
+    .media-layout {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .surgery-carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: #dfe9e7;
+      box-shadow: 0 18px 46px rgba(16, 35, 41, .08);
+    }
+
+    .surgery-carousel {
+      min-height: 620px;
+    }
+
+    .carousel-track,
+    .carousel-slide {
+      position: absolute;
+      inset: 0;
+    }
+
+    .carousel-slide {
+      opacity: 0;
+      transform: scale(1.045);
+      transition: opacity .7s ease, transform 1.1s ease;
+    }
+
+    .carousel-slide.active {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 1;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .carousel-slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(8, 29, 33, 0) 45%, rgba(8, 29, 33, .72) 100%);
+      pointer-events: none;
+    }
+
+    .carousel-caption {
+      position: absolute;
+      z-index: 2;
+      left: 22px;
+      bottom: 24px;
+      max-width: min(420px, calc(100% - 44px));
+      color: var(--white);
+      transform: translateY(10px);
+      opacity: 0;
+      transition: opacity .55s ease .12s, transform .55s ease .12s;
+    }
+
+    .carousel-slide.active .carousel-caption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .carousel-caption strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 20px;
+      line-height: 1.15;
+    }
+
+    .carousel-caption span {
+      display: block;
+      color: rgba(255,255,255,.76);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      z-index: 3;
+      right: 18px;
+      bottom: 18px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .carousel-control {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: var(--radius);
+      color: var(--white);
+      background: rgba(8, 29, 33, .58);
+      backdrop-filter: blur(12px);
+      cursor: pointer;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .carousel-control:hover {
+      transform: translateY(-2px);
+      background: rgba(8, 29, 33, .76);
+    }
+
+    .carousel-dots {
+      position: absolute;
+      z-index: 3;
+      left: 22px;
+      top: 22px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .carousel-dot {
+      width: 9px;
+      height: 9px;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(255,255,255,.44);
+      cursor: pointer;
+      transition: width .25s ease, background .25s ease;
+    }
+
+    .carousel-dot.active {
+      width: 28px;
+      background: var(--aqua);
+    }
+
+    .media-caption {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      max-width: calc(100% - 36px);
+      padding: 10px 12px;
+      border-radius: var(--radius);
+      color: var(--white);
+      background: rgba(8, 29, 33, .78);
+      backdrop-filter: blur(12px);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .carousel-slide,
+      .carousel-caption,
+      .carousel-control,
+      .carousel-dot {
+        transition: none;
+      }
+    }
+
+    .dark-band {
+      color: var(--white);
+      background: #0c2d33;
+    }
+
+    .dark-band .kicker {
+      color: var(--aqua);
+    }
+
+    .dark-band .section-head p {
+      color: rgba(255,255,255,.72);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .service {
+      min-height: 258px;
+      padding: 26px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+    }
+
+    .service-icon {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(217, 241, 238, .16);
+      border-radius: var(--radius);
+      color: var(--aqua);
+      background: transparent;
+    }
+
+    .service-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .service-icon img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    .service h3 {
+      margin: 12px 0;
+      font-size: 22px;
+      line-height: 1.18;
+    }
+
+    .service p {
+      margin-bottom: 0;
+      color: rgba(255,255,255,.7);
+      font-size: 14px;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .step {
+      min-height: 250px;
+      padding: 26px;
+      border-right: 1px solid var(--line);
+    }
+
+    .step:last-child {
+      border-right: 0;
+    }
+
+    .step svg {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 20px;
+      color: var(--teal);
+    }
+
+    .step > img {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 20px;
+      object-fit: contain;
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .step p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cta-band {
+      padding: 76px 0;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(10, 47, 54, .96), rgba(10, 47, 54, .78)),
+        url("assets/dr-luiz-cirurgia-2.jpg") center / cover no-repeat;
+    }
+
+    .cta-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .cta-row h2 {
+      max-width: 720px;
+      margin-bottom: 12px;
+      font-size: clamp(32px, 4.6vw, 58px);
+    }
+
+    .cta-row p {
+      max-width: 640px;
+      margin-bottom: 0;
+      color: rgba(255,255,255,.78);
+      font-size: 17px;
+    }
+
+    .insurance-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 760px);
+      justify-content: center;
+    }
+
+    .insurance-panel {
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .insurance-panel p {
+      margin-top: 22px;
+      margin-bottom: 20px;
+      color: var(--muted);
+    }
+
+    .faq {
+      display: grid;
+      gap: 10px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .faq-question {
+      width: 100%;
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 20px;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      font: inherit;
+      font-weight: 800;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .faq-question svg {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 auto;
+      color: var(--teal);
+      transition: transform .2s ease;
+    }
+
+    .faq-question img {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+      object-fit: contain;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 20px 20px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .faq-item.open .faq-question svg {
+      transform: rotate(45deg);
+    }
+
+    footer {
+      padding: 52px 0 82px;
+      color: rgba(255,255,255,.68);
+      background: #081d21;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+    }
+
+    footer strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--white);
+      font-size: 18px;
+    }
+
+    footer p {
+      max-width: 680px;
+      margin-bottom: 0;
+      font-size: 13px;
+    }
+
+    .footer-credentials {
+      display: block;
+      margin: 0 0 10px;
+      color: rgba(255,255,255,.82);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    .floating-cta {
+      position: fixed;
+      z-index: 20;
+      right: 18px;
+      bottom: 18px;
+    }
+
+    @media (max-width: 980px) {
+      :root {
+        --container: min(100% - 28px, 760px);
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        background-image: linear-gradient(180deg, #0b2b31 0%, #123f46 54%, #f6f8f7 100%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .hero-inner {
+        padding: 128px 0 70px;
+      }
+
+      .hero-proof,
+      .condition-grid,
+      .service-grid,
+      .process,
+      .stats,
+      .media-layout,
+      .section-head,
+      .split,
+      .insurance-wrap,
+      .cta-row,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-proof {
+        max-width: 100%;
+      }
+
+      .hero-mobile-photo {
+        display: block;
+        margin: 0 0 18px;
+        overflow: hidden;
+        border: 1px solid rgba(255,255,255,.18);
+        border-radius: var(--radius);
+        background: rgba(255,255,255,.08);
+        box-shadow: 0 18px 46px rgba(8, 29, 33, .18);
+      }
+
+      .hero-mobile-photo img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: 72% center;
+      }
+
+      .proof-item {
+        min-height: 92px;
+      }
+
+      .stats {
+        gap: 0;
+        padding: 0 20px;
+      }
+
+      .stats-label {
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(16, 35, 41, .14);
+      }
+
+      .stat {
+        padding: 20px 0;
+      }
+
+      .stats-label + .stat {
+        border-left: 0;
+        border-top: 0;
+      }
+
+      .stat + .stat {
+        border-left: 0;
+        border-top: 1px solid rgba(16, 35, 41, .14);
+      }
+
+      .stat span {
+        max-width: 100%;
+      }
+
+      section {
+        padding: 72px 0;
+      }
+
+      .doctor-photo {
+        min-height: 420px;
+      }
+
+      .surgery-carousel {
+        min-height: 330px;
+      }
+
+      .step {
+        min-height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .step:last-child {
+        border-bottom: 0;
+      }
+
+      .cta-row .button,
+      .footer-grid .button {
+        width: fit-content;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .topbar {
+        padding: 16px 0;
+      }
+
+      .nav {
+        gap: 8px;
+      }
+
+      .brand {
+        flex: 1 1 auto;
+        gap: 6px;
+      }
+
+      .brand-mark {
+        width: 32px;
+        height: 32px;
+        font-size: 10px;
+      }
+
+      .brand span:last-child {
+        max-width: none;
+        font-size: 13px;
+      }
+
+      .topbar .button {
+        flex: 0 0 auto;
+        min-height: 34px;
+        padding: 0 7px;
+        gap: 5px;
+        font-size: 10px;
+      }
+
+      .topbar .button img,
+      .topbar .button svg {
+        margin: 0;
+        width: 14px;
+        height: 14px;
+      }
+
+      h1 {
+        max-width: 100%;
+        font-size: clamp(30px, 9.8vw, 40px);
+        line-height: 1.04;
+        overflow-wrap: break-word;
+      }
+
+      .hero-copy {
+        font-size: 17px;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .topbar .button {
+        width: auto;
+      }
+
+      .hero-actions {
+        width: 100%;
+      }
+
+      .condition,
+      .bio,
+      .service,
+      .insurance-panel {
+        padding: 22px;
+      }
+
+      .floating-cta {
+        inset: auto 14px 14px;
+      }
+
+      .floating-cta .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#inicio" class="brand" aria-label="Dr. Luiz Sarmanho">
+        <span class="brand-mark">LS</span>
+        <span>Dr. Luiz Sarmanho</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#convenios">Convênios</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+
+      <a class="button primary" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
+        <img src="assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-label="Apresentação">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>Ortopedista <span class="hero-title-accent">e</span> Traumatologista <span class="hero-title-accent">em Brasília</span></h1>
+          <p class="hero-copy">Agende uma avaliação com o Dr. Luiz Sarmanho, ortopedista com atuação em trauma, quadril, artroplastia total e procedimentos ortopédicos relacionados à dor.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
+              <img src="assets/icons/health-line/calendar.svg" alt="" aria-hidden="true">
+              Agendar avaliação
+            </a>
+          </div>
+
+          <figure class="hero-mobile-photo">
+            <img src="assets/foto-background.png" alt="Dr. Luiz Henrique Sarmanho">
+          </figure>
+
+          <div class="hero-proof" aria-label="Diferenciais do Dr. Luiz Sarmanho">
+            <div class="proof-item">
+              <strong>+10</strong>
+              <span>anos de experiência em ortopedia</span>
+            </div>
+            <div class="proof-item">
+              <strong>+2.000</strong>
+              <span>cirurgias realizadas</span>
+            </div>
+            <div class="proof-item">
+              <strong>+40</strong>
+              <span>convênios aceitos ou em validação pela clínica</span>
+            </div>
+            <div class="proof-item">
+              <strong>Fácil acesso</strong>
+              <span>consultório moderno em localização acessível</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem-band">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Quando marcar uma consulta</h2>
+          </div>
+        </div>
+
+        <div class="condition-grid">
+          <article class="condition">
+            <div class="icon"><img src="assets/icons/health-line/leg.svg" alt="" aria-hidden="true"></div>
+            <h3>Dor no quadril</h3>
+            <p>Para quem sente dor ao caminhar, levantar da cadeira, subir escadas ou permanecer muito tempo em pé.</p>
+          </article>
+          <article class="condition">
+            <div class="icon"><img src="assets/icons/health-line/xray.svg" alt="" aria-hidden="true"></div>
+            <h3>Artrose e desgaste articular</h3>
+            <p>Avaliação do grau de desgaste, impacto na rotina e possibilidades de tratamento conforme o caso.</p>
+          </article>
+          <article class="condition">
+            <div class="icon"><img src="assets/icons/health-line/trauma-alert.svg" alt="" aria-hidden="true"></div>
+            <h3>Fraturas e traumas</h3>
+            <p>Atendimento para lesões traumáticas e acompanhamento de casos com maior complexidade ortopédica.</p>
+          </article>
+          <article class="condition">
+            <div class="icon"><img src="assets/icons/health-line/pain-burst.svg" alt="" aria-hidden="true"></div>
+            <h3>Dor que não melhora</h3>
+            <p>Quando a dor persiste por semanas, volta com frequência ou limita atividades simples da rotina.</p>
+          </article>
+          <article class="condition">
+            <div class="icon"><img src="assets/icons/health-line/walking.svg" alt="" aria-hidden="true"></div>
+            <h3>Dificuldade para se movimentar</h3>
+            <p>Rigidez, perda de mobilidade, insegurança para caminhar ou dificuldade para subir escadas.</p>
+          </article>
+          <article class="condition">
+            <div class="icon"><img src="assets/icons/health-line/foot.svg" alt="" aria-hidden="true"></div>
+            <h3>Quedas ou piora após esforço</h3>
+            <p>Casos em que a dor começa ou piora depois de queda, torção, impacto ou aumento de carga.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container split">
+        <div class="surface doctor-photo" role="img" aria-label="Dr. Luiz Sarmanho em ambiente de atendimento"></div>
+        <div class="surface bio">
+          <div class="kicker">Sobre o Dr. Luiz Sarmanho</div>
+          <h2>Um ortopedista com vivência em consultório, hospital e centro cirúrgico.</h2>
+          <p>Dr. Luiz Henrique Corrêa da Costa Sarmanho é médico ortopedista e traumatologista. Sua atuação envolve trauma ortopédico de alta complexidade, tratamento do quadril, artroplastia total e procedimentos ortopédicos relacionados à dor.</p>
+          <p>Ao longo da carreira, acumulou experiência no tratamento de fraturas de pelve e acetábulo, reconstrução articular e cirurgias de quadril. Também atua como mentor de residentes no Hospital Regional de Taguatinga, participando da formação de novos ortopedistas.</p>
+          <p>No atendimento, a proposta é explicar o caso com clareza: o que pode estar causando a dor, quais exames fazem sentido, quais caminhos existem e quando um procedimento ou cirurgia deve ser considerado.</p>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div>
+                <strong>Residência em Ortopedia e Traumatologia</strong>
+                <small>Formação pela Secretaria de Estado de Saúde do Distrito Federal, com atuação no HRT.</small>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div>
+                <strong>SBOT</strong>
+                <small>Membro titular da Sociedade Brasileira de Ortopedia e Traumatologia.</small>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div>
+                <strong>Mentor de residentes no HRT</strong>
+                <small>Participa da orientação teórica e prática de novos ortopedistas.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container stats">
+        <p class="stats-label">Vivência voltada a casos ortopédicos de maior complexidade</p>
+        <div class="stat">
+          <strong>+2.000</strong>
+          <span>cirurgias realizadas ao longo da trajetória médica</span>
+        </div>
+        <div class="stat">
+          <strong>Quadril</strong>
+          <span>artroplastia total, fraturas e reconstrução articular</span>
+        </div>
+        <div class="stat">
+          <strong>Dor</strong>
+          <span>procedimentos ortopédicos relacionados à dor</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="media-showcase" aria-label="Registros profissionais do Dr. Luiz Sarmanho">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Atuação na prática</div>
+            <h2>Experiência em casos ortopédicos que exigem precisão.</h2>
+          </div>
+          <p>Experiência cirúrgica ajuda a avaliar com mais precisão quando o tratamento pode ser conservador, quando um procedimento faz sentido e quando a cirurgia deve ser discutida.</p>
+        </div>
+
+        <div class="media-layout">
+          <div class="surgery-carousel" aria-label="Fotos do Dr. Luiz em centro cirúrgico">
+            <div class="carousel-track">
+              <figure class="carousel-slide active">
+                <img src="assets/dr-luiz-cirurgia-close-1.jpeg" alt="Dr. Luiz Sarmanho em centro cirúrgico">
+                <figcaption class="carousel-caption">
+                  <strong>Atuação em centro cirúrgico</strong>
+                  <span>Registros profissionais em ambiente hospitalar e cirúrgico.</span>
+                </figcaption>
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/dr-luiz-cirurgia-close-2.jpeg" alt="Dr. Luiz Sarmanho durante procedimento ortopédico">
+                <figcaption class="carousel-caption">
+                  <strong>Trauma e quadril</strong>
+                  <span>Experiência em casos ortopédicos que exigem precisão.</span>
+                </figcaption>
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/dr-luiz-cirurgia-1.jpg" alt="Registro do Dr. Luiz em procedimento ortopédico">
+                <figcaption class="carousel-caption">
+                  <strong>Rotina cirúrgica</strong>
+                  <span>Atuação em procedimentos e acompanhamento de casos complexos.</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="carousel-dots" aria-label="Selecionar foto">
+              <button class="carousel-dot active" type="button" aria-label="Mostrar foto 1"></button>
+              <button class="carousel-dot" type="button" aria-label="Mostrar foto 2"></button>
+              <button class="carousel-dot" type="button" aria-label="Mostrar foto 3"></button>
+            </div>
+            <div class="carousel-controls">
+              <button class="carousel-control" type="button" data-carousel-prev aria-label="Foto anterior">‹</button>
+              <button class="carousel-control" type="button" data-carousel-next aria-label="Próxima foto">›</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="tratamentos" class="dark-band">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Áreas avaliadas</div>
+            <h2>Da dor no quadril ao trauma: a conduta começa por um diagnóstico bem feito.</h2>
+          </div>
+        </div>
+
+        <div class="service-grid">
+          <article class="service">
+            <div class="service-icon"><img src="assets/icons/health-line/stethoscope.svg" alt="" aria-hidden="true"></div>
+            <h3>Ortopedia e traumatologia</h3>
+            <p>Consulta para dores, lesões, fraturas, limitações de movimento e queixas musculoesqueléticas.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon"><img src="assets/icons/health-line/joints.svg" alt="" aria-hidden="true"></div>
+            <h3>Quadril e artroplastia</h3>
+            <p>Avaliação de dor no quadril, artrose, fraturas e casos em que a artroplastia total pode ser discutida.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon"><img src="assets/icons/health-line/crutches.svg" alt="" aria-hidden="true"></div>
+            <h3>Trauma ortopédico</h3>
+            <p>Experiência em casos complexos, incluindo fraturas de fêmur, pelve e acetábulo.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon"><img src="assets/icons/health-line/injection-care.svg" alt="" aria-hidden="true"></div>
+            <h3>Viscossuplementação</h3>
+            <p>Aplicação de ácido hialurônico pode ser avaliada em articulações com indicação clínica.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon"><img src="assets/icons/health-line/pain.svg" alt="" aria-hidden="true"></div>
+            <h3>Procedimentos relacionados à dor</h3>
+            <p>Infiltrações, viscossuplementação e outros procedimentos podem ser avaliados quando houver indicação.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon"><img src="assets/icons/health-line/health-data-sync.svg" alt="" aria-hidden="true"></div>
+            <h3>Acompanhamento pós-operatório</h3>
+            <p>Acompanhamento da recuperação, orientação sobre retorno às atividades e avaliação da evolução funcional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Como é a consulta</div>
+            <h2>Você sai com uma orientação, não apenas com uma lista de exames.</h2>
+          </div>
+          <p>A consulta é pensada para entender a história da dor, avaliar limitações, revisar exames e explicar quais opções fazem sentido para o caso.</p>
+        </div>
+
+        <div class="process">
+          <article class="step">
+            <img src="assets/icons/health-line/doctor.svg" alt="" aria-hidden="true">
+            <h3>Entendimento da queixa</h3>
+            <p>O que dói, há quanto tempo, o que piora, o que melhora e como isso interfere na rotina.</p>
+          </article>
+          <article class="step">
+            <img src="assets/icons/health-line/medical-records.svg" alt="" aria-hidden="true">
+            <h3>Exame físico e exames</h3>
+            <p>Avaliação clínica e análise de exames já realizados, quando houver.</p>
+          </article>
+          <article class="step">
+            <img src="assets/icons/health-line/medical-search.svg" alt="" aria-hidden="true">
+            <h3>Hipótese diagnóstica</h3>
+            <p>Explicação sobre a provável origem da dor ou limitação e se há necessidade de novos exames.</p>
+          </article>
+          <article class="step">
+            <img src="assets/icons/health-line/health-worker-form.svg" alt="" aria-hidden="true">
+            <h3>Plano de cuidado</h3>
+            <p>Orientação sobre tratamento conservador, fisioterapia, procedimento, cirurgia ou acompanhamento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-row">
+        <div>
+          <h2>Quer entender o melhor caminho para o seu caso?</h2>
+          <p>Fale com a equipe para verificar disponibilidade, convênio e agendar uma avaliação com o Dr. Luiz.</p>
+        </div>
+        <a class="button primary" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
+          <img src="assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <section id="convenios">
+      <div class="container insurance-wrap">
+        <div class="insurance-panel">
+          <div class="kicker">Convênios</div>
+          <h2>Atendimento particular e por convênios selecionados.</h2>
+          <p>A disponibilidade pode variar conforme o tipo de atendimento, procedimento e regras de cada convênio. Antes de marcar, fale com a equipe pelo WhatsApp para confirmar se o seu plano é aceito para o caso desejado.</p>
+          <a class="button dark" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20confirmar%20se%20meu%20conv%C3%AAnio%20%C3%A9%20aceito%20para%20atendimento%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
+            <img src="assets/icons/health-line/insurance-card.svg" alt="" aria-hidden="true">
+            Confirmar meu convênio
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="duvidas">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Dúvidas frequentes</div>
+            <h2>Antes de agendar, veja as principais dúvidas.</h2>
+          </div>
+          <p>As respostas ajudam no primeiro contato. A indicação final depende da avaliação médica individual.</p>
+        </div>
+
+        <div class="faq">
+          <div class="faq-item open">
+            <button class="faq-question" type="button">
+              O Dr. Luiz atende quais problemas?
+              <img src="assets/icons/health-line/body.svg" alt="" aria-hidden="true">
+            </button>
+            <div class="faq-answer">Atende queixas ortopédicas como dores articulares, lesões, fraturas, artrose, problemas no quadril e casos que podem precisar de procedimentos ou cirurgia.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Ele realiza cirurgia de quadril?
+              <img src="assets/icons/health-line/hospital.svg" alt="" aria-hidden="true">
+            </button>
+            <div class="faq-answer">Sim. A atuação inclui avaliação de casos de artroplastia total do quadril, fraturas do quadril, pelve e acetábulo.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Toda dor no quadril precisa de cirurgia?
+              <img src="assets/icons/health-line/cardiogram.svg" alt="" aria-hidden="true">
+            </button>
+            <div class="faq-answer">Não. A indicação depende do diagnóstico, da intensidade dos sintomas, do grau de limitação e da resposta a tratamentos anteriores.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Quais procedimentos relacionados à dor podem ser avaliados?
+              <img src="assets/icons/health-line/joint-injection.svg" alt="" aria-hidden="true">
+            </button>
+            <div class="faq-answer">Infiltrações, viscossuplementação e terapia por ondas de choque podem ser considerados em casos selecionados, sempre após avaliação médica.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Aceita convênio?
+              <img src="assets/icons/health-line/credit-card.svg" alt="" aria-hidden="true">
+            </button>
+            <div class="faq-answer">Sim, há atendimento por diversos convênios e também particular. A cobertura precisa ser confirmada com a equipe antes do agendamento.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Como faço para agendar?
+              <img src="assets/icons/health-line/appointment-check.svg" alt="" aria-hidden="true">
+            </button>
+            <div class="faq-answer">O primeiro contato pode ser feito pelo WhatsApp. A equipe informa horários, local, documentos necessários e orienta sobre convênio ou consulta particular.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Preciso levar exames?
+              <img src="assets/icons/health-line/exam-folder.svg" alt="" aria-hidden="true">
+            </button>
+            <div class="faq-answer">Se tiver exames anteriores, leve para a consulta. Eles ajudam na avaliação, mas o médico também pode solicitar novos exames se forem necessários.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Dr. Luiz Henrique Corrêa da Costa Sarmanho</strong>
+        <span class="footer-credentials">CRM 17907 GO | CRM 17931 DF | RQE 13110</span>
+        <p>Médico ortopedista e traumatologista com atuação em trauma ortopédico de alta complexidade, quadril, artroplastia total e procedimentos relacionados à dor. Brasília-DF.</p>
+      </div>
+      <a class="button primary" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
+        <img src="assets/icons/health-line/appointment-check.svg" alt="" aria-hidden="true">
+        Agendar consulta
+      </a>
+    </div>
+  </footer>
+
+  <div class="floating-cta">
+    <a class="button dark" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
+      <img src="assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
+      WhatsApp
+    </a>
+  </div>
+
+  <script>
+    document.querySelectorAll(".faq-question").forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".faq-item");
+        item.classList.toggle("open");
+      });
+    });
+
+    document.querySelectorAll(".surgery-carousel").forEach((carousel) => {
+      const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+      const dots = Array.from(carousel.querySelectorAll(".carousel-dot"));
+      const prev = carousel.querySelector("[data-carousel-prev]");
+      const next = carousel.querySelector("[data-carousel-next]");
+      let activeIndex = 0;
+      let timer;
+
+      const showSlide = (index) => {
+        activeIndex = (index + slides.length) % slides.length;
+        slides.forEach((slide, slideIndex) => {
+          slide.classList.toggle("active", slideIndex === activeIndex);
+        });
+        dots.forEach((dot, dotIndex) => {
+          dot.classList.toggle("active", dotIndex === activeIndex);
+        });
+      };
+
+      const start = () => {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        timer = window.setInterval(() => showSlide(activeIndex + 1), 5200);
+      };
+
+      const stop = () => {
+        window.clearInterval(timer);
+      };
+
+      prev.addEventListener("click", () => {
+        stop();
+        showSlide(activeIndex - 1);
+        start();
+      });
+
+      next.addEventListener("click", () => {
+        stop();
+        showSlide(activeIndex + 1);
+        start();
+      });
+
+      dots.forEach((dot, dotIndex) => {
+        dot.addEventListener("click", () => {
+          stop();
+          showSlide(dotIndex);
+          start();
+        });
+      });
+
+      carousel.addEventListener("mouseenter", stop);
+      carousel.addEventListener("mouseleave", start);
+      start();
+    });
+  </script>
+</body>
+</html>
