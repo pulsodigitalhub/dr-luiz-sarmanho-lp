@@ -329,7 +329,11 @@
     }
 
     .problem-band {
-      padding-top: 70px;
+      padding-top: 48px;
+    }
+
+    #duvidas {
+      padding-top: 58px;
     }
 
     .condition-grid {
@@ -997,7 +1001,11 @@
       }
 
       .problem-band {
-        padding-top: 56px;
+        padding-top: 34px;
+      }
+
+      #duvidas {
+        padding-top: 42px;
       }
 
       .stats {
