@@ -878,6 +878,7 @@
       min-height: 430px;
       border: 0;
       filter: saturate(.9) contrast(.96);
+      pointer-events: none;
     }
 
     .faq {
