@@ -12,6 +12,7 @@ const pageMarkup = `<header class="topbar">
         <a href="#tratamentos">Tratamentos</a>
         <a href="#sobre">Sobre</a>
         <a href="#convenios">Convênios</a>
+        <a href="#localizacao">Localização</a>
         <a href="#duvidas">Dúvidas</a>
       </nav>
 
@@ -308,6 +309,34 @@ const pageMarkup = `<header class="topbar">
           </a>
         </div>
 
+      </div>
+    </section>
+
+    <section id="localizacao" class="location-section">
+      <div class="container location-wrap">
+        <div class="location-copy">
+          <div class="kicker">Localização</div>
+          <h2>Atendimento na Unique Ortopedia, na Asa Sul.</h2>
+          <p>O consultório fica no Centro Médico Lúcio Costa, em uma região de fácil acesso para quem está em Brasília.</p>
+          <div class="location-address">
+            <strong>Unique Ortopedia - Asa Sul</strong>
+            <span>SGAS II 610 Centro Médico Lúcio Costa, Sala 07</span>
+            <span>Asa Sul, Brasília - DF, 70200-700</span>
+          </div>
+          <a class="button dark" href="https://www.google.com/maps/search/?api=1&query=Unique%20Ortopedia%20SGAS%20II%20610%20Centro%20M%C3%A9dico%20L%C3%BAcio%20Costa%20Sala%2007%20Asa%20Sul%20Bras%C3%ADlia%20DF" target="_blank" rel="noopener">
+            <img src="assets/icons/health-line/hospital.svg" alt="" aria-hidden="true">
+            Abrir no Google Maps
+          </a>
+        </div>
+        <div class="map-card" aria-label="Mapa da Unique Ortopedia Asa Sul">
+          <iframe
+            title="Mapa da Unique Ortopedia Asa Sul"
+            src="https://www.google.com/maps?q=Unique%20Ortopedia%20SGAS%20II%20610%20Centro%20M%C3%A9dico%20L%C3%BAcio%20Costa%20Sala%2007%20Asa%20Sul%20Bras%C3%ADlia%20DF&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
     </section>
 
