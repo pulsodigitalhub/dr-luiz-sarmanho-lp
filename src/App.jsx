@@ -159,9 +159,9 @@ const pageMarkup = `<header class="topbar">
         <div class="section-head">
           <div>
             <div class="kicker">Atuação na prática</div>
-            <h2>Experiência em casos ortopédicos que exigem precisão.</h2>
+            <h2>Vivência cirúrgica para avaliar melhor cada caso.</h2>
           </div>
-          <p>Experiência cirúrgica ajuda a avaliar com mais precisão quando o tratamento pode ser conservador, quando um procedimento faz sentido e quando a cirurgia deve ser discutida.</p>
+          <p>A atuação em centro cirúrgico ajuda a diferenciar quando o tratamento pode ser conservador, quando um procedimento faz sentido e quando a cirurgia deve ser discutida.</p>
         </div>
 
         <div class="media-layout">
@@ -171,21 +171,21 @@ const pageMarkup = `<header class="topbar">
                 <img src="assets/dr-luiz-cirurgia-close-1.jpeg" alt="Dr. Luiz Sarmanho em centro cirúrgico">
                 <figcaption class="carousel-caption">
                   <strong>Atuação em centro cirúrgico</strong>
-                  <span>Registros profissionais em ambiente hospitalar e cirúrgico.</span>
+                  <span>Vivência prática em procedimentos e rotinas hospitalares.</span>
                 </figcaption>
               </figure>
               <figure class="carousel-slide">
                 <img src="assets/dr-luiz-cirurgia-close-2.jpeg" alt="Dr. Luiz Sarmanho durante procedimento ortopédico">
                 <figcaption class="carousel-caption">
                   <strong>Trauma e quadril</strong>
-                  <span>Experiência em casos ortopédicos que exigem precisão.</span>
+                  <span>Avaliação de casos que exigem planejamento e indicação cuidadosa.</span>
                 </figcaption>
               </figure>
               <figure class="carousel-slide">
                 <img src="assets/dr-luiz-cirurgia-1.jpg" alt="Registro do Dr. Luiz em procedimento ortopédico">
                 <figcaption class="carousel-caption">
                   <strong>Rotina cirúrgica</strong>
-                  <span>Atuação em procedimentos e acompanhamento de casos complexos.</span>
+                  <span>Acompanhamento de casos complexos, do diagnóstico à recuperação.</span>
                 </figcaption>
               </figure>
             </div>
@@ -399,6 +399,12 @@ const pageMarkup = `<header class="topbar">
 
 export default function App() {
   useEffect(() => {
+    const updateFloatingCta = () => {
+      document.body.classList.toggle("show-floating-cta", window.scrollY > window.innerHeight * 0.72);
+    };
+    updateFloatingCta();
+    window.addEventListener("scroll", updateFloatingCta, { passive: true });
+
     const faqButtons = Array.from(document.querySelectorAll(".faq-question"));
     const faqCleanups = faqButtons.map((button) => {
       const onClick = () => {
@@ -460,6 +466,8 @@ export default function App() {
     });
 
     return () => {
+      window.removeEventListener("scroll", updateFloatingCta);
+      document.body.classList.remove("show-floating-cta");
       faqCleanups.forEach((cleanup) => cleanup());
       carouselCleanups.forEach((cleanup) => cleanup());
     };
