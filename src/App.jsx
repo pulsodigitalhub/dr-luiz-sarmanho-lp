@@ -325,7 +325,7 @@ const pageMarkup = `<header class="topbar">
         <div class="map-card" aria-label="Mapa da Unique Ortopedia Asa Sul">
           <iframe
             title="Mapa da Unique Ortopedia Asa Sul"
-            src="https://www.google.com/maps?q=Unique%20Ortopedia%20SGAS%20II%20610%20Centro%20M%C3%A9dico%20L%C3%BAcio%20Costa%20Sala%2007%20Asa%20Sul%20Bras%C3%ADlia%20DF&output=embed"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-47.9042%2C-15.8278%2C-47.8942%2C-15.8198&layer=mapnik&marker=-15.8238%2C-47.8992"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             allowfullscreen>
