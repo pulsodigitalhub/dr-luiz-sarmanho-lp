@@ -834,7 +834,7 @@
 
     .location-wrap {
       display: grid;
-      grid-template-columns: minmax(280px, .55fr) minmax(0, 1fr);
+      grid-template-columns: minmax(240px, .42fr) minmax(0, 1fr);
       gap: 28px;
       align-items: stretch;
     }
@@ -851,21 +851,10 @@
       padding: 34px;
     }
 
-    .location-copy h2 {
-      margin-bottom: 16px;
-      font-size: clamp(30px, 3vw, 42px);
-      line-height: 1.08;
-    }
-
-    .location-copy p {
-      color: var(--muted);
-      font-size: 16px;
-    }
-
     .location-address {
       display: grid;
       gap: 5px;
-      margin: 22px 0 24px;
+      margin: 18px 0 0;
       padding-top: 20px;
       border-top: 1px solid var(--line);
       color: var(--muted);
