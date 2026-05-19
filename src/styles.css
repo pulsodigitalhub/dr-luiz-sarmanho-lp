@@ -1045,9 +1045,9 @@
       .hero-mobile-photo img {
         width: 100%;
         height: auto;
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 3 / 4;
         object-fit: cover;
-        object-position: 72% center;
+        object-position: 86% center;
       }
 
       .proof-item {
