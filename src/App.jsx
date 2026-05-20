@@ -112,7 +112,7 @@ const pageMarkup = `<header class="topbar">
           <div class="kicker">Sobre o Dr. Luiz Sarmanho</div>
           <h2>Um ortopedista com vivência em consultório, hospital e centro cirúrgico.</h2>
           <p>Dr. Luiz Henrique Corrêa da Costa Sarmanho é médico ortopedista e traumatologista. Sua atuação envolve trauma ortopédico de alta complexidade, tratamento do quadril, artroplastia total e procedimentos ortopédicos relacionados à dor.</p>
-          <p>Ao longo da carreira, acumulou experiência no tratamento de fraturas de pelve e acetábulo, reconstrução articular e cirurgias de quadril. Também atua como mentor de residentes no Hospital Regional de Taguatinga, participando da formação de novos ortopedistas.</p>
+          <p>Ao longo da carreira, acumulou experiência no tratamento de fraturas de pelve e acetábulo, reconstrução articular e cirurgias de quadril. Também atua como preceptor de residentes no Hospital Regional de Taguatinga, participando da formação de novos ortopedistas.</p>
           <p>No atendimento, a proposta é explicar o caso com clareza: o que pode estar causando a dor, quais exames fazem sentido, quais caminhos existem e quando um procedimento ou cirurgia deve ser considerado.</p>
 
           <div class="timeline">
@@ -130,8 +130,8 @@ const pageMarkup = `<header class="topbar">
             </div>
             <div class="timeline-item">
               <div>
-                <strong>Mentor de residentes no HRT</strong>
-                <small>Participa da orientação teórica e prática de novos ortopedistas.</small>
+                <strong>Preceptor de residentes no HRT</strong>
+                <small>Participa na formação teórica e prática de novos ortopedistas.</small>
               </div>
             </div>
           </div>
@@ -403,7 +403,7 @@ const pageMarkup = `<header class="topbar">
     <div class="container footer-grid">
       <div>
         <strong>Dr. Luiz Henrique Corrêa da Costa Sarmanho</strong>
-        <span class="footer-credentials">CRM 17907 GO | CRM 17931 DF | RQE 13110</span>
+        <span class="footer-credentials">CRM 17931 DF | RQE 13110 | TEOT 14336</span>
         <p>Médico ortopedista e traumatologista com atuação em trauma ortopédico de alta complexidade, quadril, artroplastia total e procedimentos relacionados à dor. Brasília-DF.</p>
       </div>
       <a class="button primary" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
