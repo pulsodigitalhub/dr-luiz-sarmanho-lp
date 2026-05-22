@@ -33,7 +33,7 @@ const pageMarkup = `<header class="topbar">
           <h1>Ortopedia, <span class="hero-title-accent">quadril</span> e procedimentos <span class="hero-title-accent">para dor</span></h1>
           <p class="hero-copy">Agende uma avaliação com o Dr. Luiz Sarmanho para queixas ortopédicas, dor no quadril, artrose, artroplastia total e procedimentos ortopédicos relacionados ao controle da dor.</p>
           <div class="hero-actions">
-            <a class="button primary" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
+            <a class="button primary" href="#contato">
               <img src="assets/icons/health-line/calendar.svg" alt="" aria-hidden="true">
               Agendar avaliação
             </a>
@@ -287,16 +287,26 @@ const pageMarkup = `<header class="topbar">
       </div>
     </section>
 
-    <section class="cta-band">
+    <section id="contato" class="cta-band">
       <div class="container cta-row">
         <div>
           <h2>Quer entender o melhor caminho para o seu caso?</h2>
           <p>Fale com a equipe para verificar disponibilidade, convênio e agendar uma avaliação com o Dr. Luiz.</p>
         </div>
-        <a class="button primary" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
-          <img src="assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
-          Chamar no WhatsApp
-        </a>
+        <form class="lead-form" aria-label="Formulário de agendamento">
+          <label>
+            <span>Nome</span>
+            <input type="text" name="nome" autocomplete="name" placeholder="Seu nome" required>
+          </label>
+          <label>
+            <span>Telefone</span>
+            <input type="tel" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(61) 99999-9999" required>
+          </label>
+          <button class="button primary" type="submit">
+            <img src="assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
+            Solicitar contato
+          </button>
+        </form>
       </div>
     </section>
 
@@ -409,7 +419,7 @@ const pageMarkup = `<header class="topbar">
         <span class="footer-credentials">CRM 17931 DF | RQE 13110 | TEOT 14336</span>
         <p>Médico ortopedista com atuação em quadril, artroplastia total e procedimentos ortopédicos relacionados ao controle da dor. Brasília-DF.</p>
       </div>
-      <a class="button primary" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
+      <a class="button primary" href="#contato">
         <img src="assets/icons/health-line/appointment-check.svg" alt="" aria-hidden="true">
         Agendar consulta
       </a>
@@ -491,11 +501,36 @@ export default function App() {
       };
     });
 
+    const leadFormCleanups = Array.from(document.querySelectorAll(".lead-form")).map((form) => {
+      const onSubmit = (event) => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+
+        const formData = new FormData(form);
+        const nome = String(formData.get("nome") || "").trim();
+        const telefone = String(formData.get("telefone") || "").trim();
+        const message = encodeURIComponent(`Olá, gostaria de agendar uma avaliação com o Dr. Luiz Sarmanho.\n\nNome: ${nome}\nTelefone: ${telefone}`);
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "lead_form_submit",
+          form_name: "cta_agendamento",
+        });
+
+        window.open(`https://wa.me/5561992371117?text=${message}`, "_blank", "noopener");
+        form.reset();
+      };
+
+      form.addEventListener("submit", onSubmit);
+      return () => form.removeEventListener("submit", onSubmit);
+    });
+
     return () => {
       window.removeEventListener("scroll", updateFloatingCta);
       document.body.classList.remove("show-floating-cta");
       faqCleanups.forEach((cleanup) => cleanup());
       carouselCleanups.forEach((cleanup) => cleanup());
+      leadFormCleanups.forEach((cleanup) => cleanup());
     };
   }, []);
 
