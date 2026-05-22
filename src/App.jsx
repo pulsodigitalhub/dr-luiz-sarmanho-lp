@@ -4,8 +4,11 @@ import "./styles.css";
 const pageMarkup = `<header class="topbar">
     <div class="container nav">
       <a href="#inicio" class="brand" aria-label="Dr. Luiz Sarmanho">
-        <span class="brand-mark">LS</span>
-        <span>Dr. Luiz Sarmanho</span>
+        <span class="brand-mark"><img src="assets/brand/simbolo-dr-luiz.svg" alt="" aria-hidden="true"></span>
+        <span class="brand-copy">
+          <strong>Luiz Sarmanho</strong>
+          <small>Ortopedia • Quadril</small>
+        </span>
       </a>
 
       <nav class="nav-links" aria-label="Navegação principal">
@@ -348,49 +351,49 @@ const pageMarkup = `<header class="topbar">
           <div class="faq-item open">
             <button class="faq-question" type="button">
               O Dr. Luiz atende quais problemas?
-              <img src="assets/icons/health-line/body.svg" alt="" aria-hidden="true">
+              <span class="faq-indicator" aria-hidden="true"></span>
             </button>
             <div class="faq-answer">Atende queixas ortopédicas como dores articulares, lesões, artrose, problemas no quadril e casos que podem precisar de procedimentos ou cirurgia.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
               Ele realiza cirurgia de quadril?
-              <img src="assets/icons/health-line/hospital.svg" alt="" aria-hidden="true">
+              <span class="faq-indicator" aria-hidden="true"></span>
             </button>
             <div class="faq-answer">Sim. A atuação inclui avaliação de casos de artroplastia total do quadril, artrose, dor persistente e outras condições que afetam essa articulação.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
               Toda dor no quadril precisa de cirurgia?
-              <img src="assets/icons/health-line/cardiogram.svg" alt="" aria-hidden="true">
+              <span class="faq-indicator" aria-hidden="true"></span>
             </button>
             <div class="faq-answer">Não. A indicação depende do diagnóstico, da intensidade dos sintomas, do grau de limitação e da resposta a tratamentos anteriores.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
               Quais procedimentos para dor podem ser avaliados?
-              <img src="assets/icons/health-line/joint-injection.svg" alt="" aria-hidden="true">
+              <span class="faq-indicator" aria-hidden="true"></span>
             </button>
             <div class="faq-answer">Infiltrações, viscossuplementação e terapia por ondas de choque podem ser considerados em casos selecionados, sempre após avaliação médica e indicação clínica.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
               Aceita convênio?
-              <img src="assets/icons/health-line/credit-card.svg" alt="" aria-hidden="true">
+              <span class="faq-indicator" aria-hidden="true"></span>
             </button>
             <div class="faq-answer">Sim, há atendimento por diversos convênios e também particular. A cobertura precisa ser confirmada com a equipe antes do agendamento.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
               Como faço para agendar?
-              <img src="assets/icons/health-line/appointment-check.svg" alt="" aria-hidden="true">
+              <span class="faq-indicator" aria-hidden="true"></span>
             </button>
             <div class="faq-answer">O primeiro contato pode ser feito pelo WhatsApp. A equipe informa horários, local, documentos necessários e orienta sobre convênio ou consulta particular.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
               Preciso levar exames?
-              <img src="assets/icons/health-line/exam-folder.svg" alt="" aria-hidden="true">
+              <span class="faq-indicator" aria-hidden="true"></span>
             </button>
             <div class="faq-answer">Se tiver exames anteriores, leve para a consulta. Eles ajudam na avaliação, mas o médico também pode solicitar novos exames se forem necessários.</div>
           </div>
