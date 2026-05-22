@@ -27,8 +27,8 @@ const pageMarkup = `<header class="topbar">
     <section class="hero" aria-label="Apresentação">
       <div class="container hero-inner">
         <div class="hero-content">
-          <h1>Ortopedista <span class="hero-title-accent">e</span> Traumatologista <span class="hero-title-accent">em Brasília</span></h1>
-          <p class="hero-copy">Agende uma avaliação com o Dr. Luiz Sarmanho, ortopedista com atuação em trauma, quadril, artroplastia total e procedimentos ortopédicos relacionados à dor.</p>
+          <h1>Ortopedia, <span class="hero-title-accent">quadril</span> e procedimentos <span class="hero-title-accent">para dor</span></h1>
+          <p class="hero-copy">Agende uma avaliação com o Dr. Luiz Sarmanho para queixas ortopédicas, dor no quadril, artrose, artroplastia total e procedimentos ortopédicos relacionados ao controle da dor.</p>
           <div class="hero-actions">
             <a class="button primary" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
               <img src="assets/icons/health-line/calendar.svg" alt="" aria-hidden="true">
@@ -83,8 +83,8 @@ const pageMarkup = `<header class="topbar">
           </article>
           <article class="condition">
             <div class="icon"><img src="assets/icons/health-line/trauma-alert.svg" alt="" aria-hidden="true"></div>
-            <h3>Fraturas e traumas</h3>
-            <p>Atendimento para lesões traumáticas e acompanhamento de casos com maior complexidade ortopédica.</p>
+            <h3>Lesões ortopédicas</h3>
+            <p>Avaliação de lesões, limitações de movimento e quadros que exigem acompanhamento ortopédico.</p>
           </article>
           <article class="condition">
             <div class="icon"><img src="assets/icons/health-line/pain-burst.svg" alt="" aria-hidden="true"></div>
@@ -111,9 +111,9 @@ const pageMarkup = `<header class="topbar">
         <div class="surface bio">
           <div class="kicker">Sobre o Dr. Luiz Sarmanho</div>
           <h2>Um ortopedista com vivência em consultório, hospital e centro cirúrgico.</h2>
-          <p>Dr. Luiz Henrique Corrêa da Costa Sarmanho é médico ortopedista e traumatologista. Sua atuação envolve trauma ortopédico de alta complexidade, tratamento do quadril, artroplastia total e procedimentos ortopédicos relacionados à dor.</p>
-          <p>Ao longo da carreira, acumulou experiência no tratamento de fraturas de pelve e acetábulo, reconstrução articular e cirurgias de quadril. Também atua como preceptor de residentes no Hospital Regional de Taguatinga, participando da formação de novos ortopedistas.</p>
-          <p>No atendimento, a proposta é explicar o caso com clareza: o que pode estar causando a dor, quais exames fazem sentido, quais caminhos existem e quando um procedimento ou cirurgia deve ser considerado.</p>
+          <p>Dr. Luiz Henrique Corrêa da Costa Sarmanho é médico ortopedista com atuação voltada ao quadril, artroplastia total e procedimentos ortopédicos relacionados ao controle da dor.</p>
+          <p>Ao longo da carreira, acumulou experiência em cirurgia do quadril, reconstrução articular e acompanhamento de pacientes com dor musculoesquelética. Também possui formação complementar em intervenção em dor e atua como preceptor de residentes no Hospital Regional de Taguatinga.</p>
+          <p>No atendimento, a proposta é explicar o caso com clareza: o que pode estar causando a dor, quais exames fazem sentido, quais caminhos existem e quando tratamento conservador, procedimento ou cirurgia devem ser considerados.</p>
 
           <div class="timeline">
             <div class="timeline-item">
@@ -139,18 +139,18 @@ const pageMarkup = `<header class="topbar">
       </div>
 
       <div class="container stats">
-        <p class="stats-label">Vivência voltada a casos ortopédicos de maior complexidade</p>
+        <p class="stats-label">Vivência em ortopedia, quadril e procedimentos relacionados à dor</p>
         <div class="stat">
           <strong>+2.000</strong>
           <span>cirurgias realizadas ao longo da trajetória médica</span>
         </div>
         <div class="stat">
           <strong>Quadril</strong>
-          <span>artroplastia total, fraturas e reconstrução articular</span>
+          <span>artroplastia total, artrose e reconstrução articular</span>
         </div>
         <div class="stat">
           <strong>Dor</strong>
-          <span>procedimentos ortopédicos relacionados à dor</span>
+          <span>formação complementar em intervenção em dor</span>
         </div>
       </div>
     </section>
@@ -178,7 +178,7 @@ const pageMarkup = `<header class="topbar">
               <figure class="carousel-slide">
                 <img src="assets/dr-luiz-cirurgia-close-2.jpeg" alt="Dr. Luiz Sarmanho durante procedimento ortopédico">
                 <figcaption class="carousel-caption">
-                  <strong>Trauma e quadril</strong>
+                  <strong>Quadril e artroplastia</strong>
                   <span>Avaliação de casos que exigem planejamento e indicação cuidadosa.</span>
                 </figcaption>
               </figure>
@@ -210,15 +210,15 @@ const pageMarkup = `<header class="topbar">
         <div class="section-head">
           <div>
             <div class="kicker">Áreas avaliadas</div>
-            <h2>Da dor no quadril ao trauma: a conduta começa por um diagnóstico bem feito.</h2>
+            <h2>Da dor no quadril aos procedimentos: a conduta começa por um diagnóstico bem feito.</h2>
           </div>
         </div>
 
         <div class="service-grid">
           <article class="service">
             <div class="service-icon"><img src="assets/icons/health-line/stethoscope.svg" alt="" aria-hidden="true"></div>
-            <h3>Ortopedia e traumatologia</h3>
-            <p>Consulta para dores, lesões, fraturas, limitações de movimento e queixas musculoesqueléticas.</p>
+            <h3>Ortopedia</h3>
+            <p>Consulta para dores, lesões, limitações de movimento e queixas musculoesqueléticas.</p>
           </article>
           <article class="service">
             <div class="service-icon"><img src="assets/icons/health-line/joints.svg" alt="" aria-hidden="true"></div>
@@ -227,8 +227,8 @@ const pageMarkup = `<header class="topbar">
           </article>
           <article class="service">
             <div class="service-icon"><img src="assets/icons/health-line/crutches.svg" alt="" aria-hidden="true"></div>
-            <h3>Trauma ortopédico</h3>
-            <p>Experiência em casos complexos, incluindo fraturas de fêmur, pelve e acetábulo.</p>
+            <h3>Dor musculoesquelética</h3>
+            <p>Avaliação de dores persistentes, limitações funcionais e sintomas que impactam a rotina.</p>
           </article>
           <article class="service">
             <div class="service-icon"><img src="assets/icons/health-line/injection-care.svg" alt="" aria-hidden="true"></div>
@@ -237,8 +237,8 @@ const pageMarkup = `<header class="topbar">
           </article>
           <article class="service">
             <div class="service-icon"><img src="assets/icons/health-line/pain.svg" alt="" aria-hidden="true"></div>
-            <h3>Procedimentos relacionados à dor</h3>
-            <p>Infiltrações, viscossuplementação e outros procedimentos podem ser avaliados quando houver indicação.</p>
+            <h3>Procedimentos para dor</h3>
+            <p>Infiltrações, viscossuplementação e outros procedimentos podem ser avaliados quando houver indicação clínica.</p>
           </article>
           <article class="service">
             <div class="service-icon"><img src="assets/icons/health-line/health-data-sync.svg" alt="" aria-hidden="true"></div>
@@ -350,14 +350,14 @@ const pageMarkup = `<header class="topbar">
               O Dr. Luiz atende quais problemas?
               <img src="assets/icons/health-line/body.svg" alt="" aria-hidden="true">
             </button>
-            <div class="faq-answer">Atende queixas ortopédicas como dores articulares, lesões, fraturas, artrose, problemas no quadril e casos que podem precisar de procedimentos ou cirurgia.</div>
+            <div class="faq-answer">Atende queixas ortopédicas como dores articulares, lesões, artrose, problemas no quadril e casos que podem precisar de procedimentos ou cirurgia.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
               Ele realiza cirurgia de quadril?
               <img src="assets/icons/health-line/hospital.svg" alt="" aria-hidden="true">
             </button>
-            <div class="faq-answer">Sim. A atuação inclui avaliação de casos de artroplastia total do quadril, fraturas do quadril, pelve e acetábulo.</div>
+            <div class="faq-answer">Sim. A atuação inclui avaliação de casos de artroplastia total do quadril, artrose, dor persistente e outras condições que afetam essa articulação.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
@@ -368,10 +368,10 @@ const pageMarkup = `<header class="topbar">
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
-              Quais procedimentos relacionados à dor podem ser avaliados?
+              Quais procedimentos para dor podem ser avaliados?
               <img src="assets/icons/health-line/joint-injection.svg" alt="" aria-hidden="true">
             </button>
-            <div class="faq-answer">Infiltrações, viscossuplementação e terapia por ondas de choque podem ser considerados em casos selecionados, sempre após avaliação médica.</div>
+            <div class="faq-answer">Infiltrações, viscossuplementação e terapia por ondas de choque podem ser considerados em casos selecionados, sempre após avaliação médica e indicação clínica.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
@@ -404,7 +404,7 @@ const pageMarkup = `<header class="topbar">
       <div>
         <strong>Dr. Luiz Henrique Corrêa da Costa Sarmanho</strong>
         <span class="footer-credentials">CRM 17931 DF | RQE 13110 | TEOT 14336</span>
-        <p>Médico ortopedista e traumatologista com atuação em trauma ortopédico de alta complexidade, quadril, artroplastia total e procedimentos relacionados à dor. Brasília-DF.</p>
+        <p>Médico ortopedista com atuação em quadril, artroplastia total e procedimentos ortopédicos relacionados ao controle da dor. Brasília-DF.</p>
       </div>
       <a class="button primary" href="https://wa.me/5561992371117?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
         <img src="assets/icons/health-line/appointment-check.svg" alt="" aria-hidden="true">
