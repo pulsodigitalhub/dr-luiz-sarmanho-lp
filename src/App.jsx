@@ -19,9 +19,9 @@ const pageMarkup = `<header class="topbar">
         <a href="#duvidas">Dúvidas</a>
       </nav>
 
-      <a class="button primary" href="https://wa.me/556135518009?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
+      <a class="button primary" href="#contato">
         <img src="assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
-        WhatsApp
+        Agendar
       </a>
     </div>
   </header>
@@ -316,7 +316,7 @@ const pageMarkup = `<header class="topbar">
           <div class="kicker">Convênios</div>
           <h2>Atendimento particular e por convênios selecionados.</h2>
           <p>A disponibilidade pode variar conforme o tipo de atendimento, procedimento e regras de cada convênio. Antes de marcar, fale com a equipe pelo WhatsApp para confirmar se o seu plano é aceito para o caso desejado.</p>
-          <a class="button dark" href="https://wa.me/556135518009?text=Ol%C3%A1%2C%20gostaria%20de%20confirmar%20se%20meu%20conv%C3%AAnio%20%C3%A9%20aceito%20para%20atendimento%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
+          <a class="button dark" href="#contato">
             <img src="assets/icons/health-line/insurance-card.svg" alt="" aria-hidden="true">
             Confirmar meu convênio
           </a>
@@ -427,9 +427,9 @@ const pageMarkup = `<header class="topbar">
   </footer>
 
   <div class="floating-cta">
-    <a class="button dark" href="https://wa.me/556135518009?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Luiz%20Sarmanho." target="_blank" rel="noopener">
+    <a class="button dark" href="#contato">
       <img src="assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
-      WhatsApp
+      Agendar
     </a>
   </div>`;
 
