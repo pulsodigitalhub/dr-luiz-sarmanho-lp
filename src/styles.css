@@ -215,7 +215,7 @@
     @media (min-width: 981px) {
       .hero {
         background-image:
-          linear-gradient(90deg, rgba(36, 57, 70, .98) 24%, rgba(36, 57, 70, .9) 50%, rgba(36, 57, 70, .28) 78%),
+          linear-gradient(90deg, rgba(36, 57, 70, .98) 24%, rgba(36, 57, 70, .88) 50%, rgba(36, 57, 70, .1) 78%, rgba(36, 57, 70, .03) 100%),
           url("../assets/foto-background.png");
         background-size: cover, cover;
         background-position: center, 60% center;
