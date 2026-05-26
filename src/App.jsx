@@ -501,6 +501,8 @@ export default function App() {
       };
     });
 
+    const WEBHOOK_URL = "http://72.61.129.237:3333/lead";
+
     const leadFormCleanups = Array.from(document.querySelectorAll(".lead-form")).map((form) => {
       const onSubmit = (event) => {
         event.preventDefault();
@@ -516,6 +518,13 @@ export default function App() {
           event: "lead_form_submit",
           form_name: "cta_agendamento",
         });
+
+        // Envia lead ao webhook (sem bloquear o fluxo WhatsApp)
+        fetch(WEBHOOK_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ nome, whatsapp: telefone, origem: "dr-luiz-lp" }),
+        }).catch(() => {}); // silencia erros de rede
 
         window.open(`https://wa.me/556135518009?text=${message}`, "_blank", "noopener");
         form.reset();
