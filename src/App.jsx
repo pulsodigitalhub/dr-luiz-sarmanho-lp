@@ -1,13 +1,13 @@
-import { useEffect } from "react";
 import "./styles.css";
+import { useLandingEffects } from "./useLandingEffects.js";
 
-const pageMarkup = `<header class="topbar">
+export const pageMarkup = `<header class="topbar">
     <div class="container nav">
       <a href="#inicio" class="brand" aria-label="Dr. Luiz Sarmanho">
         <span class="brand-mark"><img src="assets/brand/simbolo-dr-luiz.svg" alt="" aria-hidden="true"></span>
         <span class="brand-copy">
           <strong>Luiz Sarmanho</strong>
-          <small>Ortopedia • Quadril</small>
+          <small>Ortopedia, quadril</small>
         </span>
       </a>
 
@@ -19,7 +19,7 @@ const pageMarkup = `<header class="topbar">
         <a href="#duvidas">Dúvidas</a>
       </nav>
 
-      <a class="button primary" href="#contato">
+      <a class="button primary" href="#agendamento">
         <img src="assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
         Agendar
       </a>
@@ -33,10 +33,20 @@ const pageMarkup = `<header class="topbar">
           <h1>Ortopedia, <span class="hero-title-accent">quadril</span> e procedimentos <span class="hero-title-accent">para dor</span></h1>
           <p class="hero-copy">Agende uma avaliação com o Dr. Luiz Sarmanho para queixas ortopédicas, dor no quadril, artrose, artroplastia total e procedimentos ortopédicos relacionados ao controle da dor.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#contato">
-              <img src="assets/icons/health-line/calendar.svg" alt="" aria-hidden="true">
-              Agendar avaliação
-            </a>
+            <form id="agendamento" class="lead-form" aria-label="Formulário de agendamento">
+              <label>
+                <span>Nome</span>
+                <input type="text" name="nome" autocomplete="name" placeholder="Seu nome" required>
+              </label>
+              <label>
+                <span>Telefone</span>
+                <input type="tel" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(61) 99999-9999" required>
+              </label>
+              <button class="button primary" type="submit">
+                <img src="assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
+                Solicitar contato
+              </button>
+            </form>
           </div>
 
           <figure class="hero-mobile-photo">
@@ -61,6 +71,50 @@ const pageMarkup = `<header class="topbar">
               <span>consultório moderno em localização acessível</span>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tratamentos" class="treatment-band">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Áreas avaliadas</div>
+            <h2>Da dor no quadril aos procedimentos, a conduta começa por um diagnóstico bem feito.</h2>
+          </div>
+        </div>
+
+        <div class="service-grid">
+          <article class="service">
+            <div class="service-icon"><img src="assets/icons/health-line/stethoscope.svg" alt="" aria-hidden="true"></div>
+            <h3>Ortopedia</h3>
+            <p>Consulta para dores, lesões, limitações de movimento e queixas musculoesqueléticas.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon"><img src="assets/icons/health-line/joints.svg" alt="" aria-hidden="true"></div>
+            <h3>Quadril e artroplastia</h3>
+            <p>Avaliação de dor no quadril, artrose, fraturas e casos em que a artroplastia total pode ser discutida.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon"><img src="assets/icons/health-line/crutches.svg" alt="" aria-hidden="true"></div>
+            <h3>Dor musculoesquelética</h3>
+            <p>Avaliação de dores persistentes, limitações funcionais e sintomas que impactam a rotina.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon"><img src="assets/icons/health-line/injection-care.svg" alt="" aria-hidden="true"></div>
+            <h3>Procedimentos articulares</h3>
+            <p>Procedimentos voltados ao alívio da dor e à melhora funcional podem ser avaliados conforme a indicação clínica.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon"><img src="assets/icons/health-line/pain.svg" alt="" aria-hidden="true"></div>
+            <h3>Procedimentos para dor</h3>
+            <p>Infiltrações e outros procedimentos podem ser avaliados quando houver indicação clínica.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon"><img src="assets/icons/health-line/health-data-sync.svg" alt="" aria-hidden="true"></div>
+            <h3>Acompanhamento pós-operatório</h3>
+            <p>Acompanhamento da recuperação, orientação sobre retorno às atividades e avaliação da evolução funcional.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -116,7 +170,7 @@ const pageMarkup = `<header class="topbar">
           <h2>Um ortopedista com vivência em consultório, hospital e centro cirúrgico.</h2>
           <p>Dr. Luiz Henrique Corrêa da Costa Sarmanho é médico ortopedista com atuação voltada ao quadril, artroplastia total e procedimentos ortopédicos relacionados ao controle da dor.</p>
           <p>Ao longo da carreira, acumulou experiência em cirurgia do quadril, reconstrução articular e acompanhamento de pacientes com dor musculoesquelética. Também possui formação complementar em intervenção em dor e atua como preceptor de residentes no Hospital Regional de Taguatinga.</p>
-          <p>No atendimento, a proposta é explicar o caso com clareza: o que pode estar causando a dor, quais exames fazem sentido, quais caminhos existem e quando tratamento conservador, procedimento ou cirurgia devem ser considerados.</p>
+          <p>No atendimento, a proposta é explicar o caso com clareza, o que pode estar causando a dor, quais exames fazem sentido, quais caminhos existem e quando tratamento conservador, procedimento ou cirurgia devem ser considerados.</p>
 
           <div class="timeline">
             <div class="timeline-item">
@@ -208,50 +262,6 @@ const pageMarkup = `<header class="topbar">
       </div>
     </section>
 
-    <section id="tratamentos" class="dark-band">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="kicker">Áreas avaliadas</div>
-            <h2>Da dor no quadril aos procedimentos: a conduta começa por um diagnóstico bem feito.</h2>
-          </div>
-        </div>
-
-        <div class="service-grid">
-          <article class="service">
-            <div class="service-icon"><img src="assets/icons/health-line/stethoscope.svg" alt="" aria-hidden="true"></div>
-            <h3>Ortopedia</h3>
-            <p>Consulta para dores, lesões, limitações de movimento e queixas musculoesqueléticas.</p>
-          </article>
-          <article class="service">
-            <div class="service-icon"><img src="assets/icons/health-line/joints.svg" alt="" aria-hidden="true"></div>
-            <h3>Quadril e artroplastia</h3>
-            <p>Avaliação de dor no quadril, artrose, fraturas e casos em que a artroplastia total pode ser discutida.</p>
-          </article>
-          <article class="service">
-            <div class="service-icon"><img src="assets/icons/health-line/crutches.svg" alt="" aria-hidden="true"></div>
-            <h3>Dor musculoesquelética</h3>
-            <p>Avaliação de dores persistentes, limitações funcionais e sintomas que impactam a rotina.</p>
-          </article>
-          <article class="service">
-            <div class="service-icon"><img src="assets/icons/health-line/injection-care.svg" alt="" aria-hidden="true"></div>
-            <h3>Procedimentos articulares</h3>
-            <p>Procedimentos voltados ao alívio da dor e à melhora funcional podem ser avaliados conforme a indicação clínica.</p>
-          </article>
-          <article class="service">
-            <div class="service-icon"><img src="assets/icons/health-line/pain.svg" alt="" aria-hidden="true"></div>
-            <h3>Procedimentos para dor</h3>
-            <p>Infiltrações e outros procedimentos podem ser avaliados quando houver indicação clínica.</p>
-          </article>
-          <article class="service">
-            <div class="service-icon"><img src="assets/icons/health-line/health-data-sync.svg" alt="" aria-hidden="true"></div>
-            <h3>Acompanhamento pós-operatório</h3>
-            <p>Acompanhamento da recuperação, orientação sobre retorno às atividades e avaliação da evolução funcional.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section>
       <div class="container">
         <div class="section-head">
@@ -293,20 +303,10 @@ const pageMarkup = `<header class="topbar">
           <h2>Quer entender o melhor caminho para o seu caso?</h2>
           <p>Fale com a equipe para verificar disponibilidade, convênio e agendar uma avaliação com o Dr. Luiz.</p>
         </div>
-        <form class="lead-form" aria-label="Formulário de agendamento">
-          <label>
-            <span>Nome</span>
-            <input type="text" name="nome" autocomplete="name" placeholder="Seu nome" required>
-          </label>
-          <label>
-            <span>Telefone</span>
-            <input type="tel" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(61) 99999-9999" required>
-          </label>
-          <button class="button primary" type="submit">
-            <img src="assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
-            Solicitar contato
-          </button>
-        </form>
+        <a class="button primary" href="#agendamento">
+          <img src="assets/icons/health-line/calendar.svg" alt="" aria-hidden="true">
+          Preencher formulário
+        </a>
       </div>
     </section>
 
@@ -316,7 +316,7 @@ const pageMarkup = `<header class="topbar">
           <div class="kicker">Convênios</div>
           <h2>Atendimento particular e por convênios selecionados.</h2>
           <p>A disponibilidade pode variar conforme o tipo de atendimento, procedimento e regras de cada convênio. Antes de marcar, fale com a equipe pelo WhatsApp para confirmar se o seu plano é aceito para o caso desejado.</p>
-          <a class="button dark" href="#contato">
+          <a class="button dark" href="#agendamento">
             <img src="assets/icons/health-line/insurance-card.svg" alt="" aria-hidden="true">
             Confirmar meu convênio
           </a>
@@ -330,9 +330,13 @@ const pageMarkup = `<header class="topbar">
         <div class="location-copy">
           <div class="kicker">Localização</div>
           <div class="location-address">
-            <strong>Unique Ortopedia - Asa Sul</strong>
+            <strong>Unique Ortopedia, Asa Sul</strong>
             <span>SGAS II 610 Centro Médico Lúcio Costa, Sala 07</span>
-            <span>Asa Sul, Brasília - DF, 70200-700</span>
+            <span>Asa Sul, Brasília, DF, 70200-700</span>
+          </div>
+          <div class="location-hours">
+            <img src="assets/icons/health-line/calendar.svg" alt="" aria-hidden="true">
+            <span>Horário de funcionamento, segunda a sexta, 07:00 às 20:00, sábado, 08:00 às 12:00.</span>
           </div>
         </div>
         <div class="map-card" aria-label="Mapa da Unique Ortopedia Asa Sul">
@@ -417,9 +421,16 @@ const pageMarkup = `<header class="topbar">
       <div>
         <strong>Dr. Luiz Henrique Corrêa da Costa Sarmanho</strong>
         <span class="footer-credentials">CRM 17931 DF | RQE 13110 | TEOT 14336</span>
-        <p>Médico ortopedista com atuação em quadril, artroplastia total e procedimentos ortopédicos relacionados ao controle da dor. Brasília-DF.</p>
+        <p class="footer-detail">
+          <img src="assets/icons/health-line/ambulatory-clinic.svg" alt="" aria-hidden="true">
+          <span>Unique Ortopedia, Asa Sul, SGAS II SGAS 610 Centro Médico Lúcio Costa Sala 07, Asa Sul, Brasília, DF, 70200-700.</span>
+        </p>
+        <p class="footer-detail">
+          <img src="assets/icons/health-line/calendar.svg" alt="" aria-hidden="true">
+          <span>Horário de funcionamento, segunda a sexta, 07:00 às 20:00, sábado, 08:00 às 12:00.</span>
+        </p>
       </div>
-      <a class="button primary" href="#contato">
+      <a class="button primary" href="#agendamento">
         <img src="assets/icons/health-line/appointment-check.svg" alt="" aria-hidden="true">
         Agendar consulta
       </a>
@@ -427,121 +438,14 @@ const pageMarkup = `<header class="topbar">
   </footer>
 
   <div class="floating-cta">
-    <a class="button dark" href="#contato">
+    <a class="button dark" href="#agendamento">
       <img src="assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
       Agendar
     </a>
   </div>`;
 
 export default function App() {
-  useEffect(() => {
-    const updateFloatingCta = () => {
-      document.body.classList.toggle("show-floating-cta", window.scrollY > window.innerHeight * 0.72);
-    };
-    updateFloatingCta();
-    window.addEventListener("scroll", updateFloatingCta, { passive: true });
-
-    const faqButtons = Array.from(document.querySelectorAll(".faq-question"));
-    const faqCleanups = faqButtons.map((button) => {
-      const onClick = () => {
-        const item = button.closest(".faq-item");
-        item?.classList.toggle("open");
-      };
-      button.addEventListener("click", onClick);
-      return () => button.removeEventListener("click", onClick);
-    });
-
-    const carouselCleanups = Array.from(document.querySelectorAll(".surgery-carousel")).map((carousel) => {
-      const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
-      const dots = Array.from(carousel.querySelectorAll(".carousel-dot"));
-      const prev = carousel.querySelector("[data-carousel-prev]");
-      const next = carousel.querySelector("[data-carousel-next]");
-      let activeIndex = 0;
-      let timer;
-
-      const showSlide = (index) => {
-        if (!slides.length) return;
-        activeIndex = (index + slides.length) % slides.length;
-        slides.forEach((slide, slideIndex) => {
-          slide.classList.toggle("active", slideIndex === activeIndex);
-        });
-        dots.forEach((dot, dotIndex) => {
-          dot.classList.toggle("active", dotIndex === activeIndex);
-        });
-      };
-
-      const start = () => {
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-        timer = window.setInterval(() => showSlide(activeIndex + 1), 5200);
-      };
-
-      const stop = () => window.clearInterval(timer);
-      const onPrev = () => { stop(); showSlide(activeIndex - 1); start(); };
-      const onNext = () => { stop(); showSlide(activeIndex + 1); start(); };
-
-      prev?.addEventListener("click", onPrev);
-      next?.addEventListener("click", onNext);
-      const dotCleanups = dots.map((dot, dotIndex) => {
-        const onClick = () => { stop(); showSlide(dotIndex); start(); };
-        dot.addEventListener("click", onClick);
-        return () => dot.removeEventListener("click", onClick);
-      });
-
-      carousel.addEventListener("mouseenter", stop);
-      carousel.addEventListener("mouseleave", start);
-      start();
-
-      return () => {
-        stop();
-        prev?.removeEventListener("click", onPrev);
-        next?.removeEventListener("click", onNext);
-        dotCleanups.forEach((cleanup) => cleanup());
-        carousel.removeEventListener("mouseenter", stop);
-        carousel.removeEventListener("mouseleave", start);
-      };
-    });
-
-    const WEBHOOK_URL = "http://72.61.129.237:3333/lead";
-
-    const leadFormCleanups = Array.from(document.querySelectorAll(".lead-form")).map((form) => {
-      const onSubmit = (event) => {
-        event.preventDefault();
-        if (!form.reportValidity()) return;
-
-        const formData = new FormData(form);
-        const nome = String(formData.get("nome") || "").trim();
-        const telefone = String(formData.get("telefone") || "").trim();
-        const message = encodeURIComponent(`Olá, gostaria de agendar uma avaliação com o Dr. Luiz Sarmanho.\n\nNome: ${nome}\nTelefone: ${telefone}`);
-
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: "lead_form_submit",
-          form_name: "cta_agendamento",
-        });
-
-        // Envia lead ao webhook (sem bloquear o fluxo WhatsApp)
-        fetch(WEBHOOK_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ nome, whatsapp: telefone, origem: "dr-luiz-lp" }),
-        }).catch(() => {}); // silencia erros de rede
-
-        window.open(`https://wa.me/556135518009?text=${message}`, "_blank", "noopener");
-        form.reset();
-      };
-
-      form.addEventListener("submit", onSubmit);
-      return () => form.removeEventListener("submit", onSubmit);
-    });
-
-    return () => {
-      window.removeEventListener("scroll", updateFloatingCta);
-      document.body.classList.remove("show-floating-cta");
-      faqCleanups.forEach((cleanup) => cleanup());
-      carouselCleanups.forEach((cleanup) => cleanup());
-      leadFormCleanups.forEach((cleanup) => cleanup());
-    };
-  }, []);
+  useLandingEffects({ enableForm: true });
 
   return <div dangerouslySetInnerHTML={{ __html: pageMarkup }} />;
 }

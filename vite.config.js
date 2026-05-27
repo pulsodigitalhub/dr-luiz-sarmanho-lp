@@ -10,6 +10,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         meta: resolve(__dirname, "meta/index.html"),
+        ortopediaGeral: resolve(__dirname, "ortopedia-geral/index.html"),
+        metaOrtopediaGeral: resolve(__dirname, "meta/ortopedia-geral/index.html"),
       },
     },
   },
