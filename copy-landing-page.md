@@ -218,7 +218,7 @@ Experiência em casos complexos, incluindo fraturas de fêmur, pelve e acetábul
 
 ### Procedimentos relacionados à dor
 
-Infiltrações, viscossuplementação e outros procedimentos podem ser avaliados quando houver indicação.
+Infiltrações e outros procedimentos podem ser avaliados quando houver indicação.
 
 ### Ondas de choque
 
@@ -335,7 +335,7 @@ Não. A indicação depende do diagnóstico, da intensidade dos sintomas, do gra
 
 ### Quais procedimentos relacionados à dor podem ser avaliados?
 
-Infiltrações, viscossuplementação e terapia por ondas de choque podem ser considerados em casos selecionados, sempre após avaliação médica.
+Infiltrações, terapia por ondas de choque e outros procedimentos podem ser considerados em casos selecionados, sempre após avaliação médica.
 
 ### Aceita convênio?
 

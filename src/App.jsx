@@ -235,13 +235,13 @@ const pageMarkup = `<header class="topbar">
           </article>
           <article class="service">
             <div class="service-icon"><img src="assets/icons/health-line/injection-care.svg" alt="" aria-hidden="true"></div>
-            <h3>Viscossuplementação</h3>
-            <p>Aplicação de ácido hialurônico pode ser avaliada em articulações com indicação clínica.</p>
+            <h3>Procedimentos articulares</h3>
+            <p>Procedimentos voltados ao alívio da dor e à melhora funcional podem ser avaliados conforme a indicação clínica.</p>
           </article>
           <article class="service">
             <div class="service-icon"><img src="assets/icons/health-line/pain.svg" alt="" aria-hidden="true"></div>
             <h3>Procedimentos para dor</h3>
-            <p>Infiltrações, viscossuplementação e outros procedimentos podem ser avaliados quando houver indicação clínica.</p>
+            <p>Infiltrações e outros procedimentos podem ser avaliados quando houver indicação clínica.</p>
           </article>
           <article class="service">
             <div class="service-icon"><img src="assets/icons/health-line/health-data-sync.svg" alt="" aria-hidden="true"></div>
@@ -384,7 +384,7 @@ const pageMarkup = `<header class="topbar">
               Quais procedimentos para dor podem ser avaliados?
               <span class="faq-indicator" aria-hidden="true"></span>
             </button>
-            <div class="faq-answer">Infiltrações, viscossuplementação e terapia por ondas de choque podem ser considerados em casos selecionados, sempre após avaliação médica e indicação clínica.</div>
+            <div class="faq-answer">Infiltrações, terapia por ondas de choque e outros procedimentos podem ser considerados em casos selecionados, sempre após avaliação médica e indicação clínica.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question" type="button">
