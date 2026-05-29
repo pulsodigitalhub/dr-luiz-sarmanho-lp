@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 
+const LEAD_WEBHOOK_URL = "https://api.icebergcompany.com.br/lead-webhook/dr-luiz";
+
 export function useLandingEffects({ enableForm = false, whatsappPhone = "556135518009" } = {}) {
   useEffect(() => {
     const updateFloatingCta = () => {
@@ -85,7 +87,7 @@ export function useLandingEffects({ enableForm = false, whatsappPhone = "5561355
               form_name: "cta_agendamento",
             });
 
-            fetch("http://72.61.129.237:3333/lead", {
+            fetch(LEAD_WEBHOOK_URL, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({ nome, whatsapp: telefone, origem: "dr-luiz-lp" }),
