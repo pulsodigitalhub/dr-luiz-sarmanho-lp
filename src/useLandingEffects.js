@@ -72,14 +72,21 @@ export function useLandingEffects({ enableForm = false, whatsappPhone = "5561355
 
     const leadFormCleanups = enableForm
       ? Array.from(document.querySelectorAll(".lead-form")).map((form) => {
+          let isSubmitting = false;
+
           const onSubmit = (event) => {
             event.preventDefault();
-            if (!form.reportValidity()) return;
+            if (isSubmitting || !form.reportValidity()) return;
 
             const formData = new FormData(form);
             const nome = String(formData.get("nome") || "").trim();
             const telefone = String(formData.get("telefone") || "").trim();
             const message = encodeURIComponent(`Olá, gostaria de agendar uma avaliação com o Dr. Luiz Sarmanho.\n\nNome: ${nome}\nTelefone: ${telefone}`);
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            isSubmitting = true;
+            form.setAttribute("aria-busy", "true");
+            submitButton?.setAttribute("disabled", "disabled");
 
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
@@ -90,11 +97,22 @@ export function useLandingEffects({ enableForm = false, whatsappPhone = "5561355
             fetch(LEAD_WEBHOOK_URL, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ nome, whatsapp: telefone, origem: "dr-luiz-lp" }),
+              body: JSON.stringify({
+                nome,
+                whatsapp: telefone,
+                origem: "dr-luiz-lp",
+                unidade: "Dr Luiz Sarmanho",
+              }),
             }).catch(() => {});
 
             window.open(`https://wa.me/${whatsappPhone}?text=${message}`, "_blank", "noopener");
             form.reset();
+
+            window.setTimeout(() => {
+              isSubmitting = false;
+              form.removeAttribute("aria-busy");
+              submitButton?.removeAttribute("disabled");
+            }, 4000);
           };
 
           form.addEventListener("submit", onSubmit);
