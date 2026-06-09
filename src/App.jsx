@@ -34,6 +34,11 @@ export const pageMarkup = `<header class="topbar">
           <p class="hero-copy">Agende uma avaliação com o Dr. Luiz Sarmanho para queixas ortopédicas, dor no quadril, artrose, artroplastia total e procedimentos ortopédicos relacionados ao controle da dor.</p>
           <div class="hero-actions">
             <form id="agendamento" class="lead-form" aria-label="Formulário de agendamento">
+              <div class="lead-form-intro">
+                <img class="lead-form-whatsapp" src="assets/icons/whatsapp.svg" alt="" aria-hidden="true">
+                <strong>Preencha para iniciar o atendimento</strong>
+                <p>Deixe seu nome e WhatsApp para a equipe entrar em contato e continuar seu agendamento.</p>
+              </div>
               <label>
                 <span>Nome</span>
                 <input type="text" name="nome" autocomplete="name" placeholder="Seu nome" required>
@@ -42,9 +47,9 @@ export const pageMarkup = `<header class="topbar">
                 <span>Telefone</span>
                 <input type="tel" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(61) 99999-9999" required>
               </label>
-              <button class="button primary" type="submit">
-                <img src="assets/icons/health-line/phone.svg" alt="" aria-hidden="true">
-                Solicitar contato
+              <button class="button whatsapp-button" type="submit">
+                <img src="assets/icons/whatsapp.svg" alt="" aria-hidden="true">
+                Enviar e continuar pelo WhatsApp
               </button>
             </form>
           </div>
