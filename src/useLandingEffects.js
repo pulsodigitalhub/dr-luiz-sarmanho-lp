@@ -102,6 +102,7 @@ export function useLandingEffects({ enableForm = false, whatsappPhone = "5561355
                 whatsapp: telefone,
                 origem: "dr-luiz-lp",
                 unidade: "Dr Luiz Sarmanho",
+                pagina: window.location.href,
               }),
             }).catch(() => {});
 
