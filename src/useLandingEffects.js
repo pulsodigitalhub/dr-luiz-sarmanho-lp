@@ -94,18 +94,20 @@ export function useLandingEffects({ enableForm = false, whatsappPhone = "5561355
               form_name: "cta_agendamento",
             });
 
-            const tracking = (typeof window.getTracking === "function") ? window.getTracking() : {};
+            const tracking = typeof window.getTracking === "function" ? window.getTracking() : {};
+            const leadPayload = {
+              nome,
+              whatsapp: telefone,
+              origem: "dr-luiz-lp",
+              unidade: "Dr Luiz Sarmanho",
+              pagina: window.location.href,
+              ...tracking,
+            };
 
             fetch(LEAD_WEBHOOK_URL, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(Object.assign({
-                nome,
-                whatsapp: telefone,
-                origem: "dr-luiz-lp",
-                unidade: "Dr Luiz Sarmanho",
-                pagina: window.location.href,
-              }, tracking)),
+              body: JSON.stringify(leadPayload),
             }).catch(() => {});
 
             window.open(`https://wa.me/${whatsappPhone}?text=${message}`, "_blank", "noopener");
