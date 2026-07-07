@@ -2,7 +2,12 @@ import { useEffect } from "react";
 
 const LEAD_WEBHOOK_URL = "https://api.icebergcompany.com.br/lead-webhook/dr-luiz";
 
-export function useLandingEffects({ enableForm = false, whatsappPhone = "556135518009" } = {}) {
+export function useLandingEffects({
+  enableForm = false,
+  whatsappPhone = "556135518009",
+  whatsappMessage,
+  leadContext = {},
+} = {}) {
   useEffect(() => {
     const updateFloatingCta = () => {
       document.body.classList.toggle("show-floating-cta", window.scrollY > window.innerHeight * 0.72);
@@ -81,7 +86,11 @@ export function useLandingEffects({ enableForm = false, whatsappPhone = "5561355
             const formData = new FormData(form);
             const nome = String(formData.get("nome") || "").trim();
             const telefone = String(formData.get("telefone") || "").trim();
-            const message = encodeURIComponent(`Olá, gostaria de agendar uma avaliação com o Dr. Luiz Sarmanho.\n\nNome: ${nome}\nTelefone: ${telefone}`);
+            const defaultMessage = `Olá, gostaria de agendar uma avaliação com o Dr. Luiz Sarmanho.\n\nNome: ${nome}\nTelefone: ${telefone}`;
+            const messageText = typeof whatsappMessage === "function"
+              ? whatsappMessage({ nome, telefone })
+              : whatsappMessage || defaultMessage;
+            const message = encodeURIComponent(messageText);
             const submitButton = form.querySelector('button[type="submit"]');
 
             isSubmitting = true;
@@ -92,6 +101,7 @@ export function useLandingEffects({ enableForm = false, whatsappPhone = "5561355
             window.dataLayer.push({
               event: "lead_form_submit",
               form_name: "cta_agendamento",
+              ...leadContext,
             });
 
             const tracking = typeof window.getTracking === "function" ? window.getTracking() : {};
@@ -101,6 +111,7 @@ export function useLandingEffects({ enableForm = false, whatsappPhone = "5561355
               origem: "dr-luiz-lp",
               unidade: "Dr Luiz Sarmanho",
               pagina: window.location.href,
+              ...leadContext,
               ...tracking,
             };
 
@@ -132,5 +143,5 @@ export function useLandingEffects({ enableForm = false, whatsappPhone = "5561355
       carouselCleanups.forEach((cleanup) => cleanup());
       leadFormCleanups.forEach((cleanup) => cleanup());
     };
-  }, [enableForm, whatsappPhone]);
+  }, [enableForm, whatsappPhone, whatsappMessage, leadContext]);
 }
