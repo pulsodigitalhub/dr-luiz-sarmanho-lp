@@ -220,7 +220,7 @@ function buildPageMarkup({ region, isMeta, assetBase }) {
           <div class="kicker">Sobre o Dr. Luiz Sarmanho</div>
           <h2>Um ortopedista com vivência em consultório, hospital e centro cirúrgico.</h2>
           <p>Dr. Luiz Henrique Corrêa da Costa Sarmanho é médico ortopedista com atuação em ortopedia, cirurgia do quadril, artroplastia total e procedimentos ortopédicos relacionados ao controle da dor.</p>
-          <p>Nesta página, o foco é ${region.whatsappSubject}: entender os sintomas, avaliar limitações, revisar exames e explicar quais caminhos fazem sentido para o caso.</p>
+          <p>${region.bioFocusCopy}</p>
           <p>No atendimento, a proposta é conduzir a avaliação com clareza, sem promessas prontas e com orientação individualizada.</p>
           <div class="timeline">
             <div class="timeline-item"><div><strong>Residência em Ortopedia e Traumatologia</strong><small>Formação pela Secretaria de Estado de Saúde do Distrito Federal.</small></div></div>
