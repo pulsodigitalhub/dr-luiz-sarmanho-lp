@@ -66,7 +66,7 @@ function buildLeadAction({ region, isMeta, assetBase, whatsappUrl }) {
       <div class="lead-form-intro">
         <img class="lead-form-whatsapp" src="${assetBase}icons/whatsapp.svg" alt="" aria-hidden="true">
         <strong>Preencha para iniciar o atendimento</strong>
-        <p>Deixe seu nome e WhatsApp para a equipe continuar seu agendamento para ${region.whatsappSubject}.</p>
+        <p>Informe seus dados para agendar avaliação de ${region.whatsappSubject}.</p>
       </div>
       <label>
         <span>Nome</span>
@@ -78,7 +78,7 @@ function buildLeadAction({ region, isMeta, assetBase, whatsappUrl }) {
       </label>
       <button class="button whatsapp-button" type="submit">
         <img src="${assetBase}icons/whatsapp.svg" alt="" aria-hidden="true">
-        Enviar e continuar pelo WhatsApp
+        Continuar pelo WhatsApp
       </button>
     </form>
   </div>`;

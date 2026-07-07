@@ -110,7 +110,8 @@ export function useLandingEffects({
     if (shouldUseLeadModal) {
       const whatsappIcon = document.querySelector('img[src*="whatsapp.svg"]')?.getAttribute("src") || "assets/icons/whatsapp.svg";
       const inlineLeadForms = Array.from(document.querySelectorAll(".lead-form")).filter((form) => !form.closest(".lead-modal"));
-      const modalDescription = inlineLeadForms[0]?.querySelector(".lead-form-intro p")?.textContent?.trim() || "Informe seus dados para a equipe continuar seu agendamento pelo WhatsApp.";
+      const modalDescription = inlineLeadForms[0]?.querySelector(".lead-form-intro p")?.textContent?.trim() || "Informe seus dados para continuar pelo WhatsApp.";
+      const openerDescription = "Agende sua avaliação pelo WhatsApp.";
 
       modalElement = document.createElement("div");
       modalElement.className = "lead-modal";
@@ -123,7 +124,7 @@ export function useLandingEffects({
           <form class="lead-form lead-modal-form" aria-label="Formulário de agendamento">
             <div class="lead-form-intro">
               <img class="lead-form-whatsapp" src="${whatsappIcon}" alt="" aria-hidden="true">
-              <strong id="leadModalTitle">Informe seus dados</strong>
+              <strong id="leadModalTitle">Agendar avaliação</strong>
               <p>${modalDescription}</p>
             </div>
             <label>
@@ -136,7 +137,7 @@ export function useLandingEffects({
             </label>
             <button class="button whatsapp-button" type="submit">
               <img src="${whatsappIcon}" alt="" aria-hidden="true">
-              Enviar e continuar pelo WhatsApp
+              Continuar pelo WhatsApp
             </button>
           </form>
         </section>`;
@@ -146,10 +147,10 @@ export function useLandingEffects({
         const replacement = document.createElement("div");
         replacement.className = "cta-card lead-popup-card";
         replacement.innerHTML = `
-          <p>${modalDescription}</p>
+          <p>${openerDescription}</p>
           <button class="button whatsapp-button" type="button" data-lead-open>
             <img src="${whatsappIcon}" alt="" aria-hidden="true">
-            Preencher dados e agendar
+            Agendar avaliação
           </button>`;
         form.replaceWith(replacement);
       });

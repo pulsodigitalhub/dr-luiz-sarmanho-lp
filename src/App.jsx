@@ -37,7 +37,7 @@ export const pageMarkup = `<header class="topbar">
               <div class="lead-form-intro">
                 <img class="lead-form-whatsapp" src="assets/icons/whatsapp.svg" alt="" aria-hidden="true">
                 <strong>Preencha para iniciar o atendimento</strong>
-                <p>Deixe seu nome e WhatsApp para a equipe entrar em contato e continuar seu agendamento.</p>
+                <p>Informe seus dados para continuar pelo WhatsApp.</p>
               </div>
               <label>
                 <span>Nome</span>
@@ -49,7 +49,7 @@ export const pageMarkup = `<header class="topbar">
               </label>
               <button class="button whatsapp-button" type="submit">
                 <img src="assets/icons/whatsapp.svg" alt="" aria-hidden="true">
-                Enviar e continuar pelo WhatsApp
+                Continuar pelo WhatsApp
               </button>
             </form>
           </div>
