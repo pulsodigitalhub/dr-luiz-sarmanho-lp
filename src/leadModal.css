@@ -1,0 +1,133 @@
+body.modal-open {
+  overflow: hidden;
+}
+
+.lead-popup-card {
+  width: min(430px, 100%);
+}
+
+.lead-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+
+.lead-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lead-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 28, 35, .72);
+  backdrop-filter: blur(10px);
+}
+
+.lead-modal-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(440px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow: auto;
+  border-radius: 14px;
+  box-shadow: 0 28px 80px rgba(15, 28, 35, .34);
+  transform: translateY(18px) scale(.98);
+  transition: transform .22s ease;
+}
+
+.lead-modal.is-open .lead-modal-dialog {
+  transform: translateY(0) scale(1);
+}
+
+.lead-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(47, 70, 82, .14);
+  border-radius: 50%;
+  color: var(--teal-2);
+  background: rgba(255, 255, 255, .9);
+  font: inherit;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lead-modal-close:hover {
+  background: var(--sand);
+}
+
+.lead-modal .lead-form {
+  width: 100%;
+  gap: 14px;
+  padding: 26px;
+  border: 1px solid rgba(47, 70, 82, .12);
+  border-radius: 14px;
+  background: var(--white);
+  color: var(--ink);
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.lead-modal .lead-form-intro {
+  padding-right: 26px;
+  text-align: left;
+  justify-items: start;
+}
+
+.lead-modal .lead-form-intro strong {
+  color: var(--ink);
+  font-size: 26px;
+}
+
+.lead-modal .lead-form-intro p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.lead-modal .lead-form label {
+  color: var(--teal-2);
+}
+
+.lead-modal .lead-form input {
+  border-color: rgba(47, 70, 82, .18);
+  background: #f9fbfb;
+}
+
+.lead-modal .lead-form input:focus {
+  background: var(--white);
+}
+
+@media (max-width: 560px) {
+  .lead-modal {
+    padding: 14px;
+  }
+
+  .lead-modal-dialog {
+    max-height: calc(100vh - 28px);
+  }
+
+  .lead-modal .lead-form {
+    padding: 22px;
+  }
+
+  .lead-modal .lead-form-intro {
+    padding-right: 34px;
+  }
+
+  .lead-modal .lead-form-intro strong {
+    font-size: 22px;
+  }
+}
