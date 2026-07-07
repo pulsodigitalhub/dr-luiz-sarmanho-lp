@@ -58,6 +58,11 @@ export const pageMarkup = `<header class="topbar">
             <img src="assets/foto-background.png" alt="Dr. Luiz Henrique Sarmanho">
           </figure>
 
+          <div class="hero-doctor-badge" aria-label="Credenciais do Dr. Luiz Sarmanho">
+            <strong>Dr. Luiz Sarmanho</strong>
+            <span>Ortopedista | CRM 17931 DF | RQE 13110</span>
+          </div>
+
           <div class="hero-proof" aria-label="Diferenciais do Dr. Luiz Sarmanho">
             <div class="proof-item">
               <strong>+10</strong>
