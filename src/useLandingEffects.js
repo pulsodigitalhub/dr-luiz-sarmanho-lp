@@ -203,6 +203,8 @@ export function useLandingEffects({
             window.dataLayer.push({
               event: "lead_form_submit",
               form_name: "cta_agendamento_modal",
+              lead_name: nome,
+              lead_phone: telefone,
               ...leadContext,
             });
 
