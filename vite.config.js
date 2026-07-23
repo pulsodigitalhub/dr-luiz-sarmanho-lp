@@ -27,6 +27,7 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         meta: resolve(__dirname, "meta/index.html"),
         ortopediaGeral: resolve(__dirname, "ortopedia-geral/index.html"),
+        ortopediaTraumatologista: resolve(__dirname, "ortopedista-traumatologista/index.html"),
         metaOrtopediaGeral: resolve(__dirname, "meta/ortopedia-geral/index.html"),
         ...regionalInputs,
       },
