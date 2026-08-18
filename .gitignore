@@ -1,3 +1,6 @@
 node_modules/
 dist/
 /brand/
+.env
+.env.*
+!.env.example

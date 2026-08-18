@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./leadModal.css";
 
-const LEAD_WEBHOOK_URL = "https://api.icebergcompany.com.br/lead-webhook/dr-luiz";
+const LEAD_WEBHOOK_URL = "https://leads-clientes.sergioshouse.com.br/luiz";
 
 export function useLandingEffects({
   enableForm = false,
