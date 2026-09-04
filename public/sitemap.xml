@@ -2,15 +2,54 @@
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://drluizsarmanho.com.br/</loc>
+    <loc>https://www.drluizsarmanho.com.br/</loc>
   </url>
   <url>
-    <loc>https://drluizsarmanho.com.br/meta/</loc>
+    <loc>https://www.drluizsarmanho.com.br/coluna/</loc>
   </url>
   <url>
-    <loc>https://drluizsarmanho.com.br/meta/ortopedia-geral/</loc>
+    <loc>https://www.drluizsarmanho.com.br/joelho/</loc>
   </url>
   <url>
-    <loc>https://drluizsarmanho.com.br/ortopedia-geral/</loc>
+    <loc>https://www.drluizsarmanho.com.br/mao-punho/</loc>
+  </url>
+  <url>
+    <loc>https://www.drluizsarmanho.com.br/meta/</loc>
+  </url>
+  <url>
+    <loc>https://www.drluizsarmanho.com.br/meta/coluna/</loc>
+  </url>
+  <url>
+    <loc>https://www.drluizsarmanho.com.br/meta/joelho/</loc>
+  </url>
+  <url>
+    <loc>https://www.drluizsarmanho.com.br/meta/mao-punho/</loc>
+  </url>
+  <url>
+    <loc>https://www.drluizsarmanho.com.br/meta/ombro/</loc>
+  </url>
+  <url>
+    <loc>https://www.drluizsarmanho.com.br/meta/ortopedia-geral/</loc>
+  </url>
+  <url>
+    <loc>https://www.drluizsarmanho.com.br/meta/pe-tornozelo/</loc>
+  </url>
+  <url>
+    <loc>https://www.drluizsarmanho.com.br/meta/quadril/</loc>
+  </url>
+  <url>
+    <loc>https://www.drluizsarmanho.com.br/ombro/</loc>
+  </url>
+  <url>
+    <loc>https://www.drluizsarmanho.com.br/ortopedia-geral/</loc>
+  </url>
+  <url>
+    <loc>https://www.drluizsarmanho.com.br/pe-tornozelo/</loc>
+  </url>
+  <url>
+    <loc>https://www.drluizsarmanho.com.br/politica-de-privacidade/</loc>
+  </url>
+  <url>
+    <loc>https://www.drluizsarmanho.com.br/quadril/</loc>
   </url>
 </urlset>
