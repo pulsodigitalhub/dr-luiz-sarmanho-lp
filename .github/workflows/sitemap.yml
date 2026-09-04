@@ -1,8 +1,15 @@
+# Copiar pra .github/workflows/sitemap.yml no repo da LP.
+# Trocar vite-react pela branch de produção real (nem sempre é "main" —
+# ver AGENTS.md) e https://www.drluizsarmanho.com.br pelo domínio de produção confirmado
+# (nunca o subdomínio *.vercel.app — ver AGENTS.md).
+# Se o repo tem build (package.json com script "build"), descomentar os
+# dois steps de build abaixo; se for HTML puro sem build, remover os dois.
+
 name: Generate sitemap.xml
 
 on:
   push:
-    branches: ["feat/captura-tracking-no-submit"]
+    branches: [vite-react]
     paths-ignore:
       - 'public/sitemap.xml'
       - 'sitemap.xml'
@@ -25,15 +32,15 @@ jobs:
         with:
           node-version: 20
 
-      - name: Instalar dependências
-        run: npm ci
+      # - name: Instalar dependências
+      #   run: npm ci
 
-      - name: Build (pra descobrir as rotas reais do output)
-        run: npm run build
+      # - name: Build (pra descobrir as rotas reais do output)
+      #   run: npm run build
 
       - name: Gerar sitemap.xml
         env:
-          SITEMAP_BASE_URL: "https://drluizsarmanho.com.br"
+          SITEMAP_BASE_URL: "https://www.drluizsarmanho.com.br"
         run: node scripts/generate-sitemap.mjs
 
       - name: Commitar sitemap.xml se mudou
