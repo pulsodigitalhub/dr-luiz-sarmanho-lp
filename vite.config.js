@@ -28,6 +28,7 @@ export default defineConfig({
         meta: resolve(__dirname, "meta/index.html"),
         ortopediaGeral: resolve(__dirname, "ortopedia-geral/index.html"),
         metaOrtopediaGeral: resolve(__dirname, "meta/ortopedia-geral/index.html"),
+        politicaPrivacidade: resolve(__dirname, "politica-de-privacidade/index.html"),
         ...regionalInputs,
       },
     },

@@ -435,6 +435,9 @@ export const pageMarkup = `<header class="topbar">
         Agendar consulta
       </a>
     </div>
+    <div class="container">
+      <p class="footer-detail"><a href="/politica-de-privacidade/">Política de privacidade</a></p>
+    </div>
   </footer>
 
   <div class="floating-cta">
