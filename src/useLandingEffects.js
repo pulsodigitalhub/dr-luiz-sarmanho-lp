@@ -74,6 +74,17 @@ export function useLandingEffects({ enableForm = false, whatsappPhone = "5561355
       ? Array.from(document.querySelectorAll(".lead-form")).map((form) => {
           let isSubmitting = false;
 
+          // Telefone: so digitos, no maximo 11 (DDD + 9). 10 = fixo (4+4), 11 = celular (5+4).
+          const phoneInput = form.querySelector("[data-phone-mask]");
+          const onPhoneInput = () => {
+            const d = phoneInput.value.replace(/\D/g, "").slice(0, 11);
+            phoneInput.value = d.length <= 2 ? d
+              : d.length <= 6 ? `(${d.slice(0, 2)}) ${d.slice(2)}`
+              : d.length <= 10 ? `(${d.slice(0, 2)}) ${d.slice(2, 6)}-${d.slice(6)}`
+              : `(${d.slice(0, 2)}) ${d.slice(2, 7)}-${d.slice(7)}`;
+          };
+          phoneInput?.addEventListener("input", onPhoneInput);
+
           const onSubmit = (event) => {
             event.preventDefault();
             if (isSubmitting || !form.reportValidity()) return;
@@ -119,7 +130,10 @@ export function useLandingEffects({ enableForm = false, whatsappPhone = "5561355
           };
 
           form.addEventListener("submit", onSubmit);
-          return () => form.removeEventListener("submit", onSubmit);
+          return () => {
+            form.removeEventListener("submit", onSubmit);
+            phoneInput?.removeEventListener("input", onPhoneInput);
+          };
         })
       : [];
 
