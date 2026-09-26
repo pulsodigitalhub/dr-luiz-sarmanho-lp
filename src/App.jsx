@@ -45,7 +45,7 @@ export const pageMarkup = `<header class="topbar">
               </label>
               <label>
                 <span>Telefone</span>
-                <input type="tel" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(61) 99999-9999" required>
+                <input type="tel" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(61) 99999-9999" maxlength="15" pattern="\\([0-9]{2}\\) [0-9]{4,5}-[0-9]{4}" title="DDD + telefone (10 ou 11 dígitos)" data-phone-mask required>
               </label>
               <button class="button whatsapp-button" type="submit">
                 <img src="assets/icons/whatsapp.svg" alt="" aria-hidden="true">
