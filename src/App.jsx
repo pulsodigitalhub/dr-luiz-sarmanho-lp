@@ -457,8 +457,23 @@ export const pageMarkup = `<header class="topbar">
     </a>
   </div>`;
 
-export default function App() {
-  useLandingEffects({ enableForm: true });
+// A home é o site institucional: contato direto pelo WhatsApp, sem formulário.
+// O pageMarkup exportado segue intacto porque /ortopedia-geral/ o reaproveita com formulário.
+const WA_INSTITUCIONAL = `https://wa.me/556135518009?text=${encodeURIComponent("Olá, vim pelo site do Dr. Luiz Sarmanho e gostaria de agendar uma consulta.")}`;
 
-  return <div dangerouslySetInnerHTML={{ __html: pageMarkup }} />;
+const institucionalMarkup = pageMarkup
+  .replace(
+    /<form id="agendamento"[\s\S]*?<\/form>/,
+    `<a class="button whatsapp-button" href="${WA_INSTITUCIONAL}" target="_blank" rel="noopener">
+              <img src="assets/icons/whatsapp.svg" alt="" aria-hidden="true">
+              Agendar pelo WhatsApp
+            </a>`,
+  )
+  .replaceAll('href="#agendamento"', `href="${WA_INSTITUCIONAL}" target="_blank" rel="noopener"`)
+  .replace("Preencher formulário", "Falar no WhatsApp");
+
+export default function App() {
+  useLandingEffects({ institucional: true });
+
+  return <div dangerouslySetInnerHTML={{ __html: institucionalMarkup }} />;
 }

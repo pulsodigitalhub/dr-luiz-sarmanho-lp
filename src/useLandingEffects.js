@@ -8,6 +8,7 @@ export function useLandingEffects({
   whatsappPhone = "556135518009",
   whatsappMessage,
   leadContext = {},
+  institucional = false,
 } = {}) {
   useEffect(() => {
     const updateFloatingCta = () => {
@@ -78,7 +79,8 @@ export function useLandingEffects({
 
     const hasLeadContext = Object.keys(leadContext).length > 0;
     const hasWhatsAppLinks = Boolean(document.querySelector('a[href*="wa.me"], a[href*="api.whatsapp.com"]'));
-    const shouldUseLeadModal = enableForm || hasLeadContext || Boolean(whatsappMessage) || hasWhatsAppLinks;
+    // Institucional: contato direto pelo WhatsApp, sem formulário nem webhook.
+    const shouldUseLeadModal = !institucional && (enableForm || hasLeadContext || Boolean(whatsappMessage) || hasWhatsAppLinks);
     const cleanupCallbacks = [];
     let modalElement = null;
 
@@ -265,5 +267,5 @@ export function useLandingEffects({
       leadFormCleanups.forEach((cleanup) => cleanup());
       modalElement?.remove();
     };
-  }, [enableForm, whatsappPhone, whatsappMessage, leadContext]);
+  }, [enableForm, whatsappPhone, whatsappMessage, leadContext, institucional]);
 }
